@@ -1,5 +1,6 @@
 import PromptSync from "prompt-sync";
 import { users } from "./data.js";
+import { singUp } from "./service.js";
 
 const prompt = PromptSync();
 
@@ -29,20 +30,11 @@ while (true) {
       isMarried: inputIsMarried,
     };
 
-    let isSignedUp = false;
-
-    for (let i = 0; i < users.length; i++) {
-      if (users[i].email === user.email) {
-        isSignedUp = true;
-        break;
-      }
-    }
-
-    if (isSignedUp === true) {
-      console.log("이미 존재하는 계정입니다");
+    const isSignUpSuccess = singUp(user);
+    if (isSignUpSuccess) {
+      console.log("회원가입에 성공했습니다.");
     } else {
-      users.push(user);
-      console.log("회원가입이 완료되었어요");
+      console.log("이미 존재하는 계정입니다.");
     }
   } else if (answer === "종료") {
     break;
