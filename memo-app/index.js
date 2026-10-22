@@ -2,11 +2,11 @@ import PromptSync from "prompt-sync";
 
 const prompt = PromptSync();
 
+// 데이터
 const users = [];
 
 while (true) {
   // 현재 이 메모 서비스에 가입한 회원이 몇 명인지 메뉴에 표시해주세요
-  // (현재 이용자 수 3명...)
   const answer = prompt("메뉴: 로그인, 회원가입, 종료: ");
   if (answer === "로그인") {
     console.log("로그인 완료");
