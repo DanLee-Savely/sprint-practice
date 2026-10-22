@@ -8,7 +8,6 @@ const makeProfile = (user) => {
     return `프로필: ${user.name}님은 ${user.age}살입니다.(미혼)`;
   }
 };
-const prompt = PromptSync()
 
 console.log("--------------------------------------------------");
 // 유저 3명의 프로필 정보를 모두 출력하세요.
@@ -18,6 +17,8 @@ for (let i = 0; i < users.length; i++) {
   console.log(makeProfile(users[i]));
 }
 
+// 사용 예시
+const prompt = PromptSync()
 const inputEmail = prompt("이메일이 뭐에요?: ")
 console.log(`유저가 입력한 이메일: ${inputEmail}`)
 
