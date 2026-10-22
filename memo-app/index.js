@@ -9,8 +9,10 @@ while (true) {
     console.log("로그인 완료");
   } else if (answer === "회원가입") {
     console.log("회원가입 완료");
-  } else {
+  } else if (answer === "종료") {
     break
+  } else {
+    console.log("입력이 잘못되었습니다.");
   }
 }
 console.log("프로그램을 종료합니다");
