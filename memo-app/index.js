@@ -1,12 +1,12 @@
 import PromptSync from "prompt-sync";
+import { users } from "./data.js";
 
 const prompt = PromptSync();
 
-// 데이터
-const users = [];
-
 while (true) {
-  const answer = prompt(`메뉴(현재 사용자 ${users.length}명): 로그인, 회원가입, 종료: `);
+  const answer = prompt(
+    `메뉴(현재 사용자 ${users.length}명): 로그인, 회원가입, 종료: `,
+  );
   if (answer === "로그인") {
     console.log("로그인 완료");
   } else if (answer === "회원가입") {
@@ -27,19 +27,19 @@ while (true) {
       name: inputName,
       age: inputAge,
       isMarried: inputIsMarried,
-    }
+    };
 
     let isSignedUp = false;
 
     for (let i = 0; i < users.length; i++) {
       if (users[i].email === user.email) {
         isSignedUp = true;
-        break
+        break;
       }
     }
 
     if (isSignedUp === true) {
-      console.log("이미 존재하는 계정입니다")
+      console.log("이미 존재하는 계정입니다");
     } else {
       users.push(user);
       console.log("회원가입이 완료되었어요");
