@@ -3,13 +3,13 @@ import PromptSync from "prompt-sync";
 const prompt = PromptSync();
 
 while (true) {
-  // 유저에게 다음을 보여줍니다.
-  // "메뉴: 로그인, 회원가입, 종료"
-  // 만약에 유저가 로그인을 입력한 경우 로그인 완료라고 화면에 출력하고 처음(메뉴)으로 돌아오세요.
-  // 만약에 유저가 회원가입을 입력한 경우 회원가입 완료라고 화면에 출력하고 처음(메뉴)으로 돌아오세요.
-  // 만약에 유저가 종료를 입력한 경우 프로그램을 종료합니다하고 화면에 출력하고 프로그램을 종료하세요.
-  const answer = prompt("메모장이 실행중입니다. 종료를 원하시면 q를 눌러주세요: ");
-  if (answer === "q") {
-    break;
+  const answer = prompt("메뉴: 로그인, 회원가입, 종료: ");
+  if (answer === "로그인") {
+    console.log("로그인 완료");
+  } else if (answer === "회원가입") {
+    console.log("회원가입 완료");
+  } else {
+    break
   }
 }
+console.log("프로그램을 종료합니다");
