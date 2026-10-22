@@ -8,4 +8,4 @@ export const findUserByEmail = (email) => {
   }
 
   return null;
-}
+};

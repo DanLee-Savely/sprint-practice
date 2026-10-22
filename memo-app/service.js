@@ -1,19 +1,13 @@
 import { users } from "./data.js";
+import { findUserByEmail } from "./repository.js";
 
 export const singUp = (user) => {
-  let isSignedUp = false;
+  const foundUser = findUserByEmail(user.email);
 
-  for (let i = 0; i < users.length; i++) {
-    if (users[i].email === user.email) {
-      isSignedUp = true;
-      break;
-    }
-  }
-
-  if (isSignedUp === true) {
-    return false;
-  } else {
+  if (foundUser === null) {
     users.push(user);
     return true;
+  } else {
+    return false;
   }
 };
