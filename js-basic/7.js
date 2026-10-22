@@ -18,29 +18,29 @@ for (let i = 0; i < users.length; i++) {
 }
 
 // prompt-sync 사용 예시
-const prompt = PromptSync()
-const inputEmail = prompt("이메일이 뭐에요?: ")
-console.log(`유저가 입력한 이메일: ${inputEmail}`)
+const prompt = PromptSync();
+const inputEmail = prompt("이메일이 뭐에요?: ");
+console.log(`유저가 입력한 이메일: ${inputEmail}`);
 
 // 실전 연습1
 // 유저 1명로부터 이름, 나이, 결혼 여부(y, n)를 입력받아보세요.
 // 그 유저의 정보를 users 배열에 추가해주세요.
 // 4명의 유저 모두의 프로필을 출력해주세요.
-const inputName = prompt("이름이 뭐에요?: ")
-const inputAge = 27;
-let inputIsMarried = prompt("결혼을 했나요?(y/n): ")
+const inputName = prompt("이름이 뭐에요?: ");
+const inputAge = Number(prompt("나이를 알려주세요: "));
+let inputIsMarried = prompt("결혼을 했나요?(y/n): ");
 
 if (inputIsMarried === "y") {
-  inputIsMarried = true
+  inputIsMarried = true;
 } else {
-  inputIsMarried = false
+  inputIsMarried = false;
 }
 
 const user4 = {
   name: inputName,
   age: inputAge,
-  isMarried: inputIsMarried
-}
+  isMarried: inputIsMarried,
+};
 
 users.push(user4);
 

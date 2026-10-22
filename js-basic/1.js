@@ -31,5 +31,5 @@ console.log(y);
 // 타입 변환
 // 숫자를 문자열로 변환: String(숫자)
 // 문자를 숫자로 변환: Number(숫자), 실패시 NaN
-console.log(String(27))
-console.log(Number("27"))
+console.log(String(27));
+console.log(Number("27"));
