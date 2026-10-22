@@ -26,3 +26,24 @@ console.log(`유저가 입력한 이메일: ${inputEmail}`)
 // 나이가 27살인 유저 1명로부터 이름, 결혼 여부(y, n)를 입력받아보세요.
 // 그 유저의 정보를 users 배열에 추가해주세요.
 // 4명의 유저 모두의 프로필을 출력해주세요.
+const inputName = prompt("이름이 뭐에요?: ")
+const inputAge = 27;
+let inputIsMarried = prompt("결혼을 했나요?(y/n): ")
+
+if (inputIsMarried === "y") {
+  inputIsMarried = true
+} else {
+  inputIsMarried = false
+}
+
+const user4 = {
+  name: inputName,
+  age: inputAge,
+  isMarried: inputIsMarried
+}
+
+users.push(user4);
+
+for (let i = 0; i < users.length; i++) {
+  console.log(makeProfile(users[i]));
+}
