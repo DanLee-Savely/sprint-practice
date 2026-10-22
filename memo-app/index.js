@@ -43,10 +43,10 @@ while (true) {
     }
 
     if (isSignedUp === true) {
-      console.log("예전에 가입하신 것 가틍ㄴ데요...?")
+      console.log("이미 존재하는 계정입니다")
     } else {
       users.push(user);
-      console.log("회원가입 완료");
+      console.log("회원가입이 완료되었어요");
     }
   } else if (answer === "종료") {
     break;
