@@ -17,7 +17,7 @@ for (let i = 0; i < users.length; i++) {
   console.log(makeProfile(users[i]));
 }
 
-// 사용 예시
+// prompt-sync 사용 예시
 const prompt = PromptSync()
 const inputEmail = prompt("이메일이 뭐에요?: ")
 console.log(`유저가 입력한 이메일: ${inputEmail}`)
