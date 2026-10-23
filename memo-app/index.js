@@ -75,6 +75,7 @@ while (loggedInUser !== null) {
       console.log(`제목: ${myMemos[i].title}\n내용: ${myMemos[i].content}\n`);
     }
   } else if (answer === "메모 쓰기") {
+    // 유저로부터 메모의 제목과 내용을 입력받고, 해당 메모의 데이터를 memos에 추가해주세요.
     console.log("메모 쓰기 성공");
   } else if (answer === "종료") {
     break;
