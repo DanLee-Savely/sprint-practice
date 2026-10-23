@@ -68,6 +68,8 @@ while (loggedInUser !== null) {
   console.log(`안녕하세요 ${loggedInUser.name}님`);
   const answer = prompt("메뉴: 메모 읽기, 메모 쓰기, 종료: ");
   if (answer === "메모 읽기") {
+    // 내가 작성한 메모를 전부 불러옵니다.
+    // 모든 메모를 차례대로 출력합니다.
     console.log("메모 읽기 성공");
   } else if (answer === "메모 쓰기") {
     console.log("메모 쓰기 성공");

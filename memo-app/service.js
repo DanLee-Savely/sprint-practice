@@ -23,3 +23,7 @@ export const login = (email, password) => {
 
   return foundUser;
 };
+
+export const loadMyMemos = (email) => {
+  return [];
+}
