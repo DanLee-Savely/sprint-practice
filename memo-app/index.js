@@ -1,7 +1,7 @@
 import PromptSync from "prompt-sync";
 import { users } from "./data.js";
 import { login, singUp } from "./service.js";
-import { loadMemosByEmail } from "./repository.js";
+import { createMemo, loadMemosByEmail } from "./repository.js";
 
 const prompt = PromptSync();
 
@@ -87,6 +87,7 @@ while (loggedInUser !== null) {
     };
 
     // 메모 추가
+    createMemo(loggedInUser.email, memo);
 
     // 안내 멘트
     console.log("메모 쓰기 성공");
