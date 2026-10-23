@@ -19,16 +19,16 @@ export const memos = [
   {
     email: "a@a.com",
     content: "오늘은 노잼 하루였다!",
-    createdAt: Date.now()
+    createdAt: Date.now(),
   },
   {
     email: "a@a.com",
     content: "오늘은 꿀잼 하루였다!",
-    createdAt: Date.now()
+    createdAt: Date.now(),
   },
   {
     email: "s@s.com",
     content: "오늘은 설레는 날이었다!",
-    createdAt: Date.now()
+    createdAt: Date.now(),
   },
 ];

@@ -34,4 +34,4 @@ export const loadMyMemos = (email) => {
   }
 
   return myMemos;
-}
+};
