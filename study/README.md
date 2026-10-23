@@ -94,3 +94,14 @@
     - 용량이 매우 큼
     - npm install 명령어를 통해서 package.json에 있는 패키지 설치 히스토리를 보고 node_modules를 복구할 수 있다.
     - 따라서 굳이 업로드할 이유가 없다.
+
+# 타입스크립트
+
+- JS: 변수 = 값
+- TS: 변수: 타입 = 값 (정신건강에 이로운 방법)
+
+- npm install typescript
+- npx tsc --init
+- tsconfig.json에서 설정을 적당히 변경
+- npx tsc (ts 파일이 js 파일로 변환되어서 dist 폴더에 저장된다)
+- node dist/?.js (변환된 js 파일을 실행해보자)
