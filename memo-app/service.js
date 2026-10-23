@@ -1,4 +1,4 @@
-import { users } from "./data.js";
+import { memos, users } from "./data.js";
 import { findUserByEmail } from "./repository.js";
 
 export const singUp = (user) => {
@@ -27,7 +27,11 @@ export const login = (email, password) => {
 export const loadMyMemos = (email) => {
   const myMemos = [];
 
-  // 데이터 창고를 뒤져서 내 메모를 전부 모아보자.
+  for (let i = 0; i < memos.length; i++) {
+    if (memos[i].email === email) {
+      myMemos.push(memos[i]);
+    }
+  }
 
   return myMemos;
 }
