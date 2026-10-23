@@ -12,24 +12,24 @@
 // : 큰 정수(몰라도 됩니다)
 // : 심볼(몰라도 됩니다)
 
-const name1 = "김민수";
-const age1 = 25;
-const isMarried1 = false;
+const name1: string = "김민수";
+const age1: number = 25;
+const isMarried1: boolean = false;
 console.log(`프로필: ${name1}님은 ${age1}살입니다.`);
 
-const name2 = "김민지";
-const age2 = 21;
-const isMarried2 = false;
+const name2: string = "김민지";
+const age2: number = 21;
+const isMarried2: boolean = false;
 console.log(`프로필: ${name2}님은 ${age2}살입니다.`);
 
-let x;
+let x: undefined;
 console.log(x);
 
-let y = null;
+let y: null = null;
 console.log(y);
 
-// 타입 변환 
-// 숫자를 문자열로 변환 : String(숫자)
-// 문자를 숫자로 변환 : Number(문자)
-console.log(String(27))
-console.log(Number("27"))
+// 타입 변환
+// 숫자를 문자열로 변환: String(숫자)
+// 문자를 숫자로 변환: Number(숫자), 실패시 NaN
+console.log(String(27));
+console.log(Number("27"));
