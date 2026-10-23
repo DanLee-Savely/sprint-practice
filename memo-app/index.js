@@ -8,9 +8,12 @@ const prompt = PromptSync();
 let loggedInUser = null;
 
 while (true) {
+  console.log();
+
   const answer = prompt(
     `메뉴(현재 사용자 ${users.length}명): 로그인, 회원가입, 종료: `,
   );
+
   if (answer === "로그인") {
     // 입력 받기
     const inputEmail = prompt("이메일을 입력해주세요: ");
@@ -23,7 +26,6 @@ while (true) {
     if (loggedInUser === null) {
       console.log("로그인에 실패했어요");
     } else {
-      console.log(`안녕하세요 ${loggedInUser.name}님`);
       break;
     }
   } else if (answer === "회원가입") {
@@ -61,13 +63,13 @@ while (true) {
   } else {
     console.log("입력이 잘못되었습니다.");
   }
-
-  console.log();
 }
 
 while (loggedInUser !== null) {
-  console.log(`안녕하세요 ${loggedInUser.name}님`);
+  console.log(`${loggedInUser.name}님의 메모장입니다.`);
+
   const answer = prompt("메뉴: 메모 읽기, 메모 쓰기, 종료: ");
+
   if (answer === "메모 읽기") {
     // 메모 불러오기
     const myMemos = loadMemosByEmail(loggedInUser.email);
