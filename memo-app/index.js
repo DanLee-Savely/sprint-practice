@@ -77,7 +77,18 @@ while (loggedInUser !== null) {
       console.log(`제목: ${myMemos[i].title}\n내용: ${myMemos[i].content}\n`);
     }
   } else if (answer === "메모 쓰기") {
-    // 유저로부터 메모의 제목과 내용을 입력받고, 해당 메모의 데이터를 memos에 추가해주세요.
+    // 입력 받기
+    const inputTitle = prompt("제목을 입력해주세요: ");
+    const inputContent = prompt("내용을 입력해주세요: ");
+
+    const memo = {
+      title: inputTitle,
+      content: inputContent,
+    };
+
+    // 메모 추가
+
+    // 안내 멘트
     console.log("메모 쓰기 성공");
   } else if (answer === "종료") {
     break;
