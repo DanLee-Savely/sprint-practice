@@ -1,6 +1,7 @@
 import PromptSync from "prompt-sync";
 import { users } from "./data.js";
-import { loadMyMemos, login, singUp } from "./service.js";
+import { login, singUp } from "./service.js";
+import { loadMemosByEmail } from "./repository.js";
 
 const prompt = PromptSync();
 
@@ -69,7 +70,7 @@ while (loggedInUser !== null) {
   const answer = prompt("메뉴: 메모 읽기, 메모 쓰기, 종료: ");
   if (answer === "메모 읽기") {
     // 메모 불러오기
-    const myMemos = loadMyMemos(loggedInUser.email);
+    const myMemos = loadMemosByEmail(loggedInUser.email);
 
     // 메모 출력하기
     for (let i = 0; i < myMemos.length; i++) {

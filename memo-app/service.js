@@ -23,15 +23,3 @@ export const login = (email, password) => {
 
   return foundUser;
 };
-
-export const loadMyMemos = (email) => {
-  const myMemos = [];
-
-  for (let i = 0; i < memos.length; i++) {
-    if (memos[i].email === email) {
-      myMemos.push(memos[i]);
-    }
-  }
-
-  return myMemos;
-};
