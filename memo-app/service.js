@@ -25,5 +25,9 @@ export const login = (email, password) => {
 };
 
 export const loadMyMemos = (email) => {
-  return [];
+  const myMemos = [];
+
+  // 데이터 창고를 뒤져서 내 메모를 전부 모아보자.
+
+  return myMemos;
 }
