@@ -18,17 +18,17 @@ export const users = [
 export const memos = [
   {
     email: "a@a.com",
+    title: "오늘의 하루",
     content: "오늘은 노잼 하루였다!",
-    createdAt: Date.now(),
   },
   {
     email: "a@a.com",
+    title: "오늘의 일기",
     content: "오늘은 꿀잼 하루였다!",
-    createdAt: Date.now(),
   },
   {
     email: "s@s.com",
+    title: "썸타는 중",
     content: "오늘은 설레는 날이었다!",
-    createdAt: Date.now(),
   },
 ];
