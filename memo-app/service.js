@@ -11,3 +11,15 @@ export const singUp = (user) => {
     return false;
   }
 };
+
+export const login = (email, password) => {
+  const foundUser = findUserByEmail(email);
+  if (foundUser === null) {
+    return null;
+  }
+  if (foundUser.password !== password) {
+    return null;
+  }
+
+  return foundUser;
+};
