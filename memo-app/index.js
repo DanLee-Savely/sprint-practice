@@ -4,6 +4,8 @@ import { login, singUp } from "./service.js";
 
 const prompt = PromptSync();
 
+let loggedInUser = null;
+
 while (true) {
   const answer = prompt(
     `메뉴(현재 사용자 ${users.length}명): 로그인, 회원가입, 종료: `,
@@ -14,7 +16,7 @@ while (true) {
     const inputPassword = prompt("비밀번호를 입력해주세요: ");
 
     // 로그인 처리
-    const loggedInUser = login(inputEmail, inputPassword);
+    loggedInUser = login(inputEmail, inputPassword);
 
     // 안내 멘트
     if (loggedInUser === null) {
@@ -61,4 +63,9 @@ while (true) {
 
   console.log();
 }
+
+// "안녕하세요 민지님."
+// "메뉴: 내 메모 불러오기, 메모 작성하기, 로그아웃, 종료: "
+// 종료하기를 선택하면 프로그램이 종료됩니다.
+// 다른 메뉴를 선택하면 선택된 내용이 출력되고 다시 메뉴 화면으로 돌아가주세요.
 console.log("프로그램을 종료합니다");
