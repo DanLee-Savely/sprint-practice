@@ -72,7 +72,7 @@ while (loggedInUser !== null) {
     const myMemos = loadMyMemos(loggedInUser.email);
     // 모든 메모를 차례대로 반복문을 사용해서 내용들을 출력합니다.
     for (let i = 0; i < myMemos.length; i++) {
-      console.log(`메모 내용: ${myMemos[i].content}\n`);
+      console.log(`제목: ${myMemos[i].title}\n내용: ${myMemos[i].content}\n`);
     }
   } else if (answer === "메모 쓰기") {
     console.log("메모 쓰기 성공");
