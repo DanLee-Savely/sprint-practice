@@ -64,8 +64,16 @@ while (true) {
   console.log();
 }
 
-// "안녕하세요 민지님."
-// "메뉴: 내 메모 불러오기, 메모 작성하기, 로그아웃, 종료: "
-// 종료하기를 선택하면 프로그램이 종료됩니다.
-// 다른 메뉴를 선택하면 선택된 내용이 출력되고 다시 메뉴 화면으로 돌아가주세요.
+while (loggedInUser !== null) {
+  console.log(`안녕하세요 ${loggedInUser.name}님`);
+  const answer = prompt("메뉴: 메모 읽기, 메모 쓰기, 종료: ");
+  if (answer === "메모 읽기") {
+    console.log("메모 읽기 성공");
+  } else if (answer === "메모 쓰기") {
+    console.log("메모 쓰기 성공");
+  } else if (answer === "종료") {
+    break;
+  }
+}
+
 console.log("프로그램을 종료합니다");
