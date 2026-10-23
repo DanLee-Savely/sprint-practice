@@ -100,8 +100,8 @@
 - JS: 변수 = 값
 - TS: 변수: 타입 = 값 (정신건강에 이로운 방법)
 - 목표: ts로 코드를 작성하고 js로 변환해서 node로 실행하자.
-  - npm install typescript
-  - npx tsc --init
+  - npm install typescript (타입스크립트 설치)
+  - npx tsc --init (타입스크립트 설정 파일 생성)
   - tsconfig.json에서 설정을 적당히 변경
   - npx tsc (ts 파일이 js 파일로 변환되어서 dist 폴더에 저장된다)
-  - node dist/?.js (변환된 js 파일을 실행해보자)
+  - node dist/?.js (변환된 js 파일을 node로 실행해보자)
