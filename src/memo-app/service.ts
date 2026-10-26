@@ -1,7 +1,8 @@
-import { memos, users } from "./data.js";
+import { users } from "./data.js";
 import { findUserByEmail } from "./repository.js";
+import type { inputUserType, userType } from "./types.js";
 
-export const singUp = (user) => {
+export const singUp = (user: inputUserType): boolean => {
   const foundUser = findUserByEmail(user.email);
 
   if (foundUser === null) {
@@ -12,7 +13,7 @@ export const singUp = (user) => {
   }
 };
 
-export const login = (email, password) => {
+export const login = (email: string, password: string): null | userType => {
   const foundUser = findUserByEmail(email);
   if (foundUser === null) {
     return null;
