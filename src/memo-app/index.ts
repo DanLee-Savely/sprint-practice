@@ -2,22 +2,23 @@ import PromptSync from "prompt-sync";
 import { users } from "./data.js";
 import { login, singUp } from "./service.js";
 import { createMemo, loadMemosByEmail } from "./repository.js";
+import type { userType } from "./types.js";
 
 const prompt = PromptSync();
 
-let loggedInUser = null;
+let loggedInUser: userType | null = null;
 
 while (true) {
   console.log();
 
-  const answer = prompt(
+  const answer: string = prompt(
     `메뉴(현재 사용자 ${users.length}명): 로그인, 회원가입, 종료: `,
   );
 
   if (answer === "로그인") {
     // 입력 받기
-    const inputEmail = prompt("이메일을 입력해주세요: ");
-    const inputPassword = prompt("비밀번호를 입력해주세요: ");
+    const inputEmail: string = prompt("이메일을 입력해주세요: ");
+    const inputPassword: string = prompt("비밀번호를 입력해주세요: ");
 
     // 로그인 처리
     loggedInUser = login(inputEmail, inputPassword);
@@ -30,12 +31,14 @@ while (true) {
     }
   } else if (answer === "회원가입") {
     // 입력 받기
-    const inputEmail = prompt("이메일을 입력해주세요: ");
-    const inputPassword = prompt("비밀번호를 입력해주세요: ");
-    const inputName = prompt("이름을 알려주세요: ");
-    const inputAge = Number(prompt("나이를 알려주세요: "));
-    let inputIsMarried = prompt("결혼 유뮤를 알려주세요(y/n): ");
-    if (inputIsMarried === "y") {
+    const inputEmail: string = prompt("이메일을 입력해주세요: ");
+    const inputPassword: string = prompt("비밀번호를 입력해주세요: ");
+    const inputName: string = prompt("이름을 알려주세요: ");
+    const inputAge: number = Number(prompt("나이를 알려주세요: "));
+    const inputIsMarriedStr: string = prompt("결혼 유뮤를 알려주세요(y/n): ");
+
+    let inputIsMarried: boolean;
+    if (inputIsMarriedStr === "y") {
       inputIsMarried = true;
     } else {
       inputIsMarried = false;
