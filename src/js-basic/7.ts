@@ -29,9 +29,10 @@ console.log(`유저가 입력한 이메일: ${inputEmail}`);
 // 4명의 유저 모두의 프로필을 출력해주세요.
 const inputName: string = prompt("이름이 뭐에요?: ");
 const inputAge: number = Number(prompt("나이를 알려주세요: "));
-let inputIsMarried: "y" | "n" | boolean = prompt("결혼을 했나요?(y/n): ");
+const inputIsMarriedStr: string = prompt("결혼을 했나요?(y/n): ");
 
-if (inputIsMarried === "y") {
+let inputIsMarried: boolean;
+if (inputIsMarriedStr === "y") {
   inputIsMarried = true;
 } else {
   inputIsMarried = false;
