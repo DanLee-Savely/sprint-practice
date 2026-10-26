@@ -8,3 +8,5 @@ console.log(designer1);
 
 dev1.updateCode("새로운 코드");
 console.log(dev1);
+
+// 디자인 수정 함수 실행
