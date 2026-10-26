@@ -9,5 +9,9 @@ export class Developer {
     this.age = age;
     this.code = "텅 빈 깃허브";
   }
+  // 코드를 업데이트
+  updateCode = (newCode) => {
+    this.code = newCode;
+  };
 }
 //# sourceMappingURL=developer.js.map
