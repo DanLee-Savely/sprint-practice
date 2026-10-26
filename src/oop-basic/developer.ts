@@ -8,6 +8,6 @@ export class Developer {
   constructor(name: string, age: number) {
     this.name = name;
     this.age = age;
-    this.code = "텅 빈 깃허브"
+    this.code = "텅 빈 깃허브";
   }
 }
