@@ -105,3 +105,4 @@
   - tsconfig.json에서 설정을 적당히 변경
   - npx tsc (ts 파일이 js 파일로 변환되어서 dist 폴더에 저장된다)
   - node dist/?.js (변환된 js 파일을 node로 실행해보자)
+  - prompt-sync 패키지를 타입스크립트에서 사용하기 위해서 해당 패키지에 필요한 타입 모음들을 추가로 다운로드: npm install @types/prompt-sync

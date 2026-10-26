@@ -5,6 +5,7 @@
     "format": "npx prettier . --write"
   },
   "dependencies": {
+    "@types/prompt-sync": "^4.2.3",
     "prettier": "^3.9.10",
     "prompt-sync": "^4.2.0",
     "typescript": "^7.0.2"
