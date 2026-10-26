@@ -2,7 +2,12 @@ import PromptSync from "prompt-sync";
 import { users } from "./data.js";
 import { login, singUp } from "./service.js";
 import { createMemo, loadMemosByEmail } from "./repository.js";
-import type { userType } from "./types.js";
+import type {
+  inputMemoType,
+  inputUserType,
+  memoType,
+  userType,
+} from "./types.js";
 
 const prompt = PromptSync();
 
@@ -44,7 +49,7 @@ while (true) {
       inputIsMarried = false;
     }
 
-    const user = {
+    const user: inputUserType = {
       email: inputEmail,
       password: inputPassword,
       name: inputName,
@@ -53,7 +58,7 @@ while (true) {
     };
 
     // 회원 가입 처리
-    const isSignUpSuccess = singUp(user);
+    const isSignUpSuccess: boolean = singUp(user);
 
     // 안내 멘트
     if (isSignUpSuccess) {
@@ -71,22 +76,22 @@ while (true) {
 while (loggedInUser !== null) {
   console.log(`${loggedInUser.name}님의 메모장입니다.`);
 
-  const answer = prompt("메뉴: 메모 읽기, 메모 쓰기, 종료: ");
+  const answer: string = prompt("메뉴: 메모 읽기, 메모 쓰기, 종료: ");
 
   if (answer === "메모 읽기") {
     // 메모 불러오기
-    const myMemos = loadMemosByEmail(loggedInUser.email);
+    const myMemos: memoType[] = loadMemosByEmail(loggedInUser.email);
 
     // 메모 출력하기
     for (let i = 0; i < myMemos.length; i++) {
-      console.log(`제목: ${myMemos[i].title}\n내용: ${myMemos[i].content}\n`);
+      console.log(`제목: ${myMemos[i]!.title}\n내용: ${myMemos[i]!.content}\n`);
     }
   } else if (answer === "메모 쓰기") {
     // 입력 받기
-    const inputTitle = prompt("제목을 입력해주세요: ");
-    const inputContent = prompt("내용을 입력해주세요: ");
+    const inputTitle: string = prompt("제목을 입력해주세요: ");
+    const inputContent: string = prompt("내용을 입력해주세요: ");
 
-    const memo = {
+    const memo: inputMemoType = {
       title: inputTitle,
       content: inputContent,
     };
