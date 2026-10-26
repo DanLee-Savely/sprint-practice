@@ -2,8 +2,14 @@
 // : 객체: 다른 종류의 데이터를 여러개 모아서 사용하는 컨테이너
 // : 배열: 같은 종류의 데이터를 여러개 담아서 사용하는 컨테이너
 
+type userType = {
+  name: string;
+  age: number;
+  isMarried: Boolean;
+};
+
 // 객체(Object)
-const user1 = {
+const user1: userType = {
   name: "김민수",
   age: 25,
   isMarried: true,
