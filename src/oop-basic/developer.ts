@@ -15,7 +15,6 @@ export class Developer {
     this.designer = deigner;
   }
 
-  // 코드를 업데이트
   updateCode = () => {
     this.code = `${this.designer.getDesign()} 시안대로 작성된 새로운 코드`;
   };
