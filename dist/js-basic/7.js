@@ -1,19 +1,18 @@
 import { users } from "./data.js";
 import PromptSync from "prompt-sync";
 const makeProfile = (user) => {
-    if (user.isMarried === true) {
-        return `프로필: ${user.name}님은 ${user.age}살입니다.(기혼)`;
-    }
-    else {
-        return `프로필: ${user.name}님은 ${user.age}살입니다.(미혼)`;
-    }
+  if (user.isMarried === true) {
+    return `프로필: ${user.name}님은 ${user.age}살입니다.(기혼)`;
+  } else {
+    return `프로필: ${user.name}님은 ${user.age}살입니다.(미혼)`;
+  }
 };
 console.log("--------------------------------------------------");
 // 유저 3명의 프로필 정보를 모두 출력하세요.
 // 30000명일때도 동일한 코드로 출력할 수 있어야 합니다.
 // 코드는 3줄로 작성하세요.
 for (let i = 0; i < users.length; i++) {
-    console.log(makeProfile(users[i]));
+  console.log(makeProfile(users[i]));
 }
 // prompt-sync 사용 예시
 const prompt = PromptSync();
@@ -28,18 +27,17 @@ const inputAge = Number(prompt("나이를 알려주세요: "));
 const inputIsMarriedStr = prompt("결혼을 했나요?(y/n): ");
 let inputIsMarried;
 if (inputIsMarriedStr === "y") {
-    inputIsMarried = true;
-}
-else {
-    inputIsMarried = false;
+  inputIsMarried = true;
+} else {
+  inputIsMarried = false;
 }
 const user4 = {
-    name: inputName,
-    age: inputAge,
-    isMarried: inputIsMarried,
+  name: inputName,
+  age: inputAge,
+  isMarried: inputIsMarried,
 };
 users.push(user4);
 for (let i = 0; i < users.length; i++) {
-    console.log(makeProfile(users[i]));
+  console.log(makeProfile(users[i]));
 }
 //# sourceMappingURL=7.js.map
