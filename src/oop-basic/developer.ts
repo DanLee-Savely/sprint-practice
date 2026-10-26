@@ -2,10 +2,10 @@ import type { Designer } from "./designer.js";
 
 export class Developer {
   // 데이터
-  name: string;
-  age: number;
-  code: string;
-  designer: Designer;
+  private name: string;
+  private age: number;
+  private code: string;
+  private designer: Designer;
 
   // 행동
   constructor(name: string, age: number, deigner: Designer) {
