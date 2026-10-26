@@ -4,11 +4,11 @@
 // : const(값을 변경할 수 없음), let(값을 변경할 수 있음)
 // : 일단 const로 변수를 선언하고, 필요한 경우에만 let을 사용한다.
 // 원시값
-// : 문자열: "김민수", '김민수', `김민수`
-// : 숫자: 1, NaN, Infinity
-// : 참거짓: true, false
-// : 값이 정의되지 않았다: undefined
-// : 값이 비어있다: null
+// : 문자열(string): "김민수", '김민수', `김민수`
+// : 숫자(number): 1, NaN, Infinity
+// : 참거짓(boolean): true, false
+// : 값이 정의되지 않았다(undefined): undefined
+// : 값이 비어있다(null): null
 // : 큰 정수(몰라도 됩니다)
 // : 심볼(몰라도 됩니다)
 
