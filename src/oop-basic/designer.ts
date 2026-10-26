@@ -12,4 +12,7 @@ export class Designer {
   }
 
   // 디자인 수정 함수 추가
+  updateDesign = (newDesign: string) => {
+    this.design = newDesign;
+  };
 }
