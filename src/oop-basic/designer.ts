@@ -1,8 +1,8 @@
 export class Designer {
   // 데이터
-  name: string;
-  age: number;
-  design: string;
+  private name: string;
+  private age: number;
+  private design: string;
 
   // 행동
   constructor(name: string, age: number) {
