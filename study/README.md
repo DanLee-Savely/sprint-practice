@@ -94,3 +94,15 @@
     - 용량이 매우 큼
     - npm install 명령어를 통해서 package.json에 있는 패키지 설치 히스토리를 보고 node_modules를 복구할 수 있다.
     - 따라서 굳이 업로드할 이유가 없다.
+
+# 타입스크립트
+
+- JS: 변수 = 값
+- TS: 변수: 타입 = 값 (정신건강에 이로운 방법)
+- 목표: ts로 코드를 작성하고 js로 변환해서 node로 실행하자.
+  - npm install typescript (타입스크립트 설치)
+  - npx tsc --init (타입스크립트 설정 파일 생성)
+  - tsconfig.json에서 설정을 적당히 변경
+  - npx tsc (ts 파일이 js 파일로 변환되어서 dist 폴더에 저장된다)
+  - node dist/?.js (변환된 js 파일을 node로 실행해보자)
+  - prompt-sync 패키지를 타입스크립트에서 사용하기 위해서 해당 패키지에 필요한 타입 모음들을 추가로 다운로드: npm install @types/prompt-sync

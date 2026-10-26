@@ -1,4 +1,5 @@
 import { users } from "./data.js";
+import type { userType } from "./types.js";
 
 // 반복문
 
@@ -6,7 +7,7 @@ import { users } from "./data.js";
 
 // 반복문 방법1
 console.log("시작");
-let i = 0;
+let i: number = 0;
 while (i < 10) {
   console.log(i);
   i++;
@@ -15,14 +16,14 @@ console.log("끝");
 
 // 반복문 방법2
 console.log("시작");
-for (let i = 0; i < 10; i++) {
+for (let i: number = 0; i < 10; i++) {
   console.log(i);
 }
 console.log("끝");
 
 // 반복문 방법3
 console.log("시작");
-let j = 0;
+let j: number = 0;
 while (true) {
   console.log(j);
   j++;
@@ -33,7 +34,7 @@ while (true) {
 console.log("끝");
 
 // 실전 연습
-const makeProfile = (user) => {
+const makeProfile = (user: userType): string => {
   if (user.isMarried === true) {
     return `프로필: ${user.name}님은 ${user.age}살입니다.(기혼)`;
   } else {
@@ -46,15 +47,15 @@ console.log("--------------------------------------------------");
 // 30000명일때도 동일한 코드로 출력할 수 있어야 합니다.
 // 코드는 3줄로 작성하세요.
 for (let i = 0; i < users.length; i++) {
-  console.log(makeProfile(users[i]));
+  console.log(makeProfile(users[i]!));
 }
 
 console.log("--------------------------------------------------");
 // 유저 3명중에서 기혼자의 프로필 정보를 모두 출력하세요.
 // 30000명일때도 동일한 코드로 출력할 수 있어야 합니다.
 for (let i = 0; i < users.length; i++) {
-  if (users[i].isMarried === true) {
-    console.log(makeProfile(users[i]));
+  if (users[i]!.isMarried === true) {
+    console.log(makeProfile(users[i]!));
   }
 }
 
@@ -63,7 +64,7 @@ console.log("--------------------------------------------------");
 // 30000명일때도 동일한 코드로 출력할 수 있어야 합니다.
 let ageSum = 0;
 for (let i = 0; i < users.length; i++) {
-  ageSum += users[i].age;
+  ageSum += users[i]!.age;
 }
 console.log(`유저들의 평균 연령: ${ageSum / users.length}`);
 
@@ -73,8 +74,8 @@ console.log("--------------------------------------------------");
 let unmarriedAgeSum = 0;
 let unmarriedUserCount = 0;
 for (let i = 0; i < users.length; i++) {
-  if (users[i].isMarried === false) {
-    unmarriedAgeSum += users[i].age;
+  if (users[i]!.isMarried === false) {
+    unmarriedAgeSum += users[i]!.age;
     unmarriedUserCount++;
   }
 }
