@@ -1,5 +1,5 @@
 import { memos, users } from "./data.js";
-import type { memoType, userType } from "./types.js";
+import type { inputMemoType, memoType, userType } from "./types.js";
 
 export const findUserByEmail = (email: string): userType | null => {
   for (let i = 0; i < users.length; i++) {
@@ -23,7 +23,7 @@ export const loadMemosByEmail = (email: string): memoType[] => {
   return myMemos;
 };
 
-export const createMemo = (email, memo) => {
+export const createMemo = (email: string, memo: inputMemoType) => {
   // 1. 새로운 객체를 중괄호를 열어서 만든다
   // 2. 메모 내부의 데이터를 복사해서 새롭게 만든 객체의 내부에 붙여넣는다.
   // 3. 이메일은 별도로 추가해준다.
