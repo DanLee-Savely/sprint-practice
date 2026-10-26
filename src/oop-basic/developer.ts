@@ -15,6 +15,14 @@ export class Developer {
     this.designer = deigner;
   }
 
+  getName = () => {
+    return this.name;
+  };
+
+  getCode = () => {
+    return this.code;
+  };
+
   updateCode = () => {
     this.code = `${this.designer.getDesign()} 시안대로 작성된 새로운 코드`;
   };

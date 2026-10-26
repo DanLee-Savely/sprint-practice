@@ -1,10 +1,12 @@
 import type { Designer } from "./designer.js";
 export declare class Developer {
-  name: string;
-  age: number;
-  code: string;
-  designer: Designer;
+  private name;
+  private age;
+  private code;
+  private designer;
   constructor(name: string, age: number, deigner: Designer);
+  getName: () => string;
+  getCode: () => string;
   updateCode: () => void;
 }
 //# sourceMappingURL=developer.d.ts.map
