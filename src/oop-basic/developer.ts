@@ -1,4 +1,4 @@
-class Developer {
+export class Developer {
   // 데이터
   email: string;
   name: string;
