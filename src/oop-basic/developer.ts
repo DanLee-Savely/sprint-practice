@@ -17,7 +17,6 @@ export class Developer {
 
   // 코드를 업데이트
   updateCode = () => {
-    const currentDesign = this.designer.design;
-    this.code = `${currentDesign} 시안대로 작성된 새로운 코드`;
+    this.code = `${this.designer.getDesign()} 시안대로 작성된 새로운 코드`;
   };
 }

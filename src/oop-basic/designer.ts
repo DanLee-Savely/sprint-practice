@@ -11,6 +11,14 @@ export class Designer {
     this.design = "텅 빈 캔버스";
   }
 
+  getName = () => {
+    return this.name;
+  };
+
+  getDesign = () => {
+    return this.design;
+  };
+
   // 디자인 수정 함수 추가
   updateDesign = (newDesign: string) => {
     this.design = newDesign;

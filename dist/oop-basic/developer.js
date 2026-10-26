@@ -13,8 +13,8 @@ export class Developer {
   }
   // 코드를 업데이트
   updateCode = () => {
-    const currentDesign = this.designer.design;
-    this.code = `${currentDesign} 시안대로 작성된 새로운 코드`;
+    this.designer.design = `${this.name} 개발자가 ${this.designer.name} 디자이너의 시안을 맘대로 바꾼 디자인 시안`;
+    this.code = `${this.designer.design} 시안대로 작성된 새로운 코드`;
   };
 }
 //# sourceMappingURL=developer.js.map
