@@ -1,4 +1,6 @@
-export const users = [
+import type { memoType, userType } from "./types.js";
+
+export const users: userType[] = [
   {
     email: "a@a.com",
     password: "1234",
@@ -15,7 +17,7 @@ export const users = [
   },
 ];
 
-export const memos = [
+export const memos: memoType[] = [
   {
     email: "a@a.com",
     title: "오늘의 하루",
