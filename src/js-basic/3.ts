@@ -5,7 +5,7 @@
 // +, -, *, /, %(나머지)
 // +=, -=, /=, *=, %=
 // ++, --
-let x = 1;
+let x: number = 1;
 console.log(x);
 
 x = x + 1;
@@ -20,7 +20,7 @@ console.log(x);
 // 비교 연산자
 // ===, !==
 // <, <=, >, >=
-const y = 1;
+const y: number = 1;
 console.log(y === 1);
 console.log(y !== 2);
 console.log(y < 1);
