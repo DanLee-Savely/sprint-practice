@@ -1,8 +1,8 @@
-import type { Developer } from "./developer.js";
-export declare class DeveloperTeam {
-  private developerMembers;
+import type { Employee } from "./employee.js";
+export declare class Team<T extends Employee> {
+  private members;
   constructor();
-  addTeamMember(newDeveloper: Developer): void;
+  addTeamMember(newMember: T): void;
   study(): void;
 }
 //# sourceMappingURL=team.d.ts.map

@@ -13,4 +13,6 @@ export class AuthScreen {
     const inputEmail: string = prompt("이메일을 입력해주세요: ");
     const inputPassword: string = prompt("비밀번호를 입력해주세요: ");
   }
+
+  showSignUpForm() {}
 }
