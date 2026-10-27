@@ -3,8 +3,12 @@ import { AuthScreen } from "./auth-screen.js";
 
 export class RootScreen {
   // 데이터
+  authScreen: AuthScreen;
 
   // 생성자
+  constructor() {
+    this.authScreen = new AuthScreen();
+  }
 
   // 행동
   run() {
@@ -15,12 +19,10 @@ export class RootScreen {
 
       if (answer === "로그인") {
         // 입력 받기
-        const authScren = new AuthScreen();
-        authScren.showLoginForm();
+        this.authScreen.showLoginForm();
       } else if (answer === "회원가입") {
         // 입력 받기
-        const authScren = new AuthScreen();
-        authScren.showSignUpForm();
+        this.authScreen.showSignUpForm();
       } else if (answer === "종료") {
         break;
       } else {
