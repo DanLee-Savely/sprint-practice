@@ -21,11 +21,11 @@ export class AuthService {
     return foundUser;
   }
 
-  singUp(signUpFormType: signUpFormType): boolean {
-    const foundUser = this.authRepository.findUserByEmail(signUpFormType.email);
+  singUp(signUpFormData: signUpFormType): boolean {
+    const foundUser = this.authRepository.findUserByEmail(signUpFormData.email);
 
     if (foundUser === null) {
-      users.push(signUpFormType);
+      users.push(signUpFormData);
       return true;
     } else {
       return false;
