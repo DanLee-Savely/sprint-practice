@@ -22,7 +22,7 @@ export class AuthScreen {
     // 로그인 처리
     const loggedInUser = this.authService.login(loginFormData);
 
-    // 결과 처리
+    // 결과 보고
     if (loggedInUser === null) {
       console.log("로그인에 실패했어요");
       return null;
