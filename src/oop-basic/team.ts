@@ -1,9 +1,22 @@
-export class Team {
-  // 인스턴스 속성
-  // 우리팀멤버들목록
-  // 스터디내용
-  // 생성자
-  // 인스턴스 메소드
-  // 팀소개하기메소드
-  // 스터디내용저장하기메소드
+import type { Developer } from "./developer.js";
+
+export class DeveloperTeam {
+  private developerMembers: Developer[];
+
+  constructor() {
+    this.developerMembers = [];
+  }
+
+  addTeamMember(newDeveloper: Developer) {
+    this.developerMembers.push(newDeveloper);
+  }
+  study() {
+    console.log("=====팀원 자기 소개!=====");
+    for (let i = 0; i < this.developerMembers.length; i++) {
+      console.log(`팀원: ${this.developerMembers[i]!.getName()}`);
+    }
+    console.log("스터디를 진행했다!");
+    console.log("스터디를 완료했다!");
+    console.log();
+  }
 }
