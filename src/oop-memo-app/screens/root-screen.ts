@@ -3,7 +3,7 @@ import { AuthScreen } from "./auth-screen.js";
 
 export class RootScreen {
   // 데이터
-  authScreen: AuthScreen;
+  private authScreen: AuthScreen;
 
   // 생성자
   constructor() {
@@ -18,10 +18,8 @@ export class RootScreen {
       const answer: string = prompt(`메뉴: 로그인, 회원가입, 종료: `);
 
       if (answer === "로그인") {
-        // 입력 받기
         this.authScreen.showLoginForm();
       } else if (answer === "회원가입") {
-        // 입력 받기
         this.authScreen.showSignUpForm();
       } else if (answer === "종료") {
         break;
