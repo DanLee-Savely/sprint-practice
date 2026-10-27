@@ -11,10 +11,10 @@ export class Employee {
   }
 
   // 인스턴스 메소드
-  getName = () => {
+  getName() {
     return this.name;
-  };
-  getAge = () => {
+  }
+  getAge() {
     return this.age;
-  };
+  }
 }

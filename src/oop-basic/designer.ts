@@ -9,10 +9,10 @@ export class Designer extends Employee {
     this.design = "텅 빈 캔버스";
   }
 
-  getDesign = () => {
+  getDesign() {
     return this.design;
-  };
-  updateDesign = (newDesign: string) => {
+  }
+  updateDesign(newDesign: string) {
     this.design = newDesign;
-  };
+  }
 }

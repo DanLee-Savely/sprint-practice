@@ -11,10 +11,10 @@ export class Developer extends Employee {
     this.designer = deigner;
   }
 
-  getCode = () => {
+  getCode() {
     return this.code;
-  };
-  updateCode = () => {
+  }
+  updateCode() {
     this.code = `${this.designer.getDesign()} 시안대로 작성된 새로운 코드`;
-  };
+  }
 }
