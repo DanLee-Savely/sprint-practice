@@ -1,4 +1,5 @@
 import PromptSync from "prompt-sync";
+import { AuthService } from "../auth-service.js";
 
 const prompt = PromptSync();
 
@@ -20,6 +21,8 @@ export class AuthScreen {
     };
 
     // 서비스 직원분에게 제출해서 로그인에 성공하면 유저 정보를 알려주세요.
+    const authService = new AuthService();
+    authService.login(loginFormData);
 
     // 받은 유저 정보를 사용해서 안내 멘트를 합니다.
   }

@@ -1,5 +1,15 @@
+import type { userType } from "./types.js";
+
 export class AuthService {
-  // 로그인 데이터를 줄테니까
-  // 로그인이 될지 안될지
-  // 판단 및 결정하고 알려주세요
+  login(loginFormData: { email: string; password: string }): null | userType {
+    const foundUser = findUserByEmail(loginFormData.email);
+    if (foundUser === null) {
+      return null;
+    }
+    if (foundUser.password !== loginFormData.password) {
+      return null;
+    }
+
+    return foundUser;
+  }
 }
