@@ -1,5 +1,7 @@
-// 제네릭
-export class Team<T> {
+import type { Employee } from "./employee.js";
+
+// 제네릭: 타입을 변수화
+export class Team<T extends Employee> {
   private members: T[];
 
   constructor() {
