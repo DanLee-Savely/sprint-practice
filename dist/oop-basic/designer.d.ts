@@ -1,10 +1,8 @@
-export declare class Designer {
-  private name;
-  private age;
+import { Employee } from "./employee.js";
+export declare class Designer extends Employee {
   private design;
-  constructor(name: string, age: number);
-  getName: () => string;
-  getDesign: () => string;
-  updateDesign: (newDesign: string) => void;
+  constructor(name: string, age: number, email: string);
+  getDesign(): string;
+  updateDesign(newDesign: string): void;
 }
 //# sourceMappingURL=designer.d.ts.map

@@ -22,4 +22,7 @@ export class Employee {
   getEmail() {
     return this.email;
   }
+  createIntroduce() {
+    return `안녕하세요. 새롭게 일하게 된 ${this.name}입니다. ${this.email}로 연락주시면 감사하겠습니다.`;
+  }
 }

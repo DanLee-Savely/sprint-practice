@@ -1,0 +1,1 @@
+{"version":3,"file":"employee.d.ts","sourceRoot":"","sources":["../../src/oop-basic/employee.ts"],"names":[],"mappings":"AACA,qBAAa,QAAQ;IAEnB,OAAO,CAAC,IAAI,CAAS;IACrB,OAAO,CAAC,GAAG,CAAS;IACpB,OAAO,CAAC,KAAK,CAAS;IAGtB,YAAY,IAAI,EAAE,MAAM,EAAE,GAAG,EAAE,MAAM,EAAE,KAAK,EAAE,MAAM,EAInD;IAGD,OAAO,WAEN;IACD,MAAM,WAEL;IACD,QAAQ,WAEP;IACD,eAAe,WAEd;CACF"}

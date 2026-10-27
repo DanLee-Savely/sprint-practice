@@ -1,24 +1,16 @@
-// 클래스: 객체(오브젝트, 인스턴스)를 생성하기 위한 스펙 문서
-export class Designer {
-  // 인스턴스 속성
-  name;
-  age;
+import { Employee } from "./employee.js";
+// 상속(부모, 자식)
+export class Designer extends Employee {
   design;
-  // 생성자
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
+  constructor(name, age, email) {
+    super(name, age, email);
     this.design = "텅 빈 캔버스";
   }
-  // 인스턴스 메소드
-  getName = () => {
-    return this.name;
-  };
-  getDesign = () => {
+  getDesign() {
     return this.design;
-  };
-  updateDesign = (newDesign) => {
+  }
+  updateDesign(newDesign) {
     this.design = newDesign;
-  };
+  }
 }
 //# sourceMappingURL=designer.js.map
