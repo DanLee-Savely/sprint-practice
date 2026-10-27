@@ -1,4 +1,5 @@
 import PromptSync from "prompt-sync";
+import { AuthScreen } from "./auth-screen.js";
 
 export class RootScreen {
   // 데이터
@@ -14,8 +15,8 @@ export class RootScreen {
 
       if (answer === "로그인") {
         // 입력 받기
-        // 직원을 채용하자
-        // 채용한 직원에게 일을 시키자
+        const authScren = new AuthScreen();
+        authScren.showLoginForm();
       } else if (answer === "회원가입") {
         // 입력 받기
         const inputEmail: string = prompt("이메일을 입력해주세요: ");
