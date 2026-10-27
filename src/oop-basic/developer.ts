@@ -1,21 +1,16 @@
 import type { Designer } from "./designer.js";
+import { Employee } from "./employee.js";
 
-export class Developer {
-  private name: string;
-  private age: number;
+export class Developer extends Employee {
   private code: string;
   private designer: Designer;
 
   constructor(name: string, age: number, deigner: Designer) {
-    this.name = name;
-    this.age = age;
+    super(name, age);
     this.code = "텅 빈 깃허브";
     this.designer = deigner;
   }
 
-  getName = () => {
-    return this.name;
-  };
   getCode = () => {
     return this.code;
   };
