@@ -1,4 +1,5 @@
 import { AuthRepository } from "./auth-repository.js";
+import { users } from "./data.js";
 export class AuthService {
     authRepository;
     constructor() {
@@ -13,6 +14,16 @@ export class AuthService {
             return null;
         }
         return foundUser;
+    }
+    singUp(signUpFormType) {
+        const foundUser = this.authRepository.findUserByEmail(signUpFormType.email);
+        if (foundUser === null) {
+            users.push(signUpFormType);
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
 //# sourceMappingURL=auth-service.js.map

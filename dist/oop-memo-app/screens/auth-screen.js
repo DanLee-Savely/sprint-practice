@@ -32,6 +32,29 @@ export class AuthScreen {
         const inputName = prompt("이름을 알려주세요: ");
         const inputAge = Number(prompt("나이를 알려주세요: "));
         const inputIsMarriedStr = prompt("결혼 유뮤를 알려주세요(y/n): ");
+        let inputIsMarried;
+        if (inputIsMarriedStr === "y") {
+            inputIsMarried = true;
+        }
+        else {
+            inputIsMarried = false;
+        }
+        const signUpFormData = {
+            email: inputEmail,
+            password: inputPassword,
+            name: inputName,
+            age: inputAge,
+            isMarried: inputIsMarried,
+        };
+        // 회원 가입 처리
+        const isSignUpSuccess = this.authService.singUp(signUpFormData);
+        // 안내 멘트
+        if (isSignUpSuccess) {
+            console.log("회원가입에 성공했습니다.");
+        }
+        else {
+            console.log("이미 존재하는 계정입니다.");
+        }
     }
 }
 //# sourceMappingURL=auth-screen.js.map

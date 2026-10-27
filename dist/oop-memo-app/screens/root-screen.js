@@ -16,7 +16,7 @@ export class RootScreen {
                 }
             }
             else if (answer === "회원가입") {
-                // 과제!
+                this.authScreen.showSignUpForm();
             }
             else if (answer === "종료") {
                 break;
