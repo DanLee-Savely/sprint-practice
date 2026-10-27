@@ -1,12 +1,8 @@
 export class DeveloperTeam {
-  // 인스턴스 속성
   developerMembers;
-  // 생성자
   constructor() {
     this.developerMembers = [];
   }
-  // 인스턴스 메소드
-  // 팀원 추가
   addTeamMember(newDeveloper) {
     this.developerMembers.push(newDeveloper);
   }
