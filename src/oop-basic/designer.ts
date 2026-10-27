@@ -11,6 +11,7 @@ export class Designer {
     this.design = "텅 빈 캔버스";
   }
 
+  // 메소드
   getName = () => {
     return this.name;
   };

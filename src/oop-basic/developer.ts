@@ -15,6 +15,7 @@ export class Developer {
     this.designer = deigner;
   }
 
+  // 메소드
   getName = () => {
     return this.name;
   };
