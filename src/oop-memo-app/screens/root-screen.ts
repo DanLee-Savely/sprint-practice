@@ -18,7 +18,10 @@ export class RootScreen {
       const answer: string = prompt(`메뉴: 로그인, 회원가입, 종료: `);
 
       if (answer === "로그인") {
-        this.authScreen.showLoginForm();
+        const loggedInUser = this.authScreen.showLoginForm();
+        if (loggedInUser !== null) {
+          break;
+        }
       } else if (answer === "회원가입") {
         this.authScreen.showSignUpForm();
       } else if (answer === "종료") {
