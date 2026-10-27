@@ -4,20 +4,15 @@ import { AuthService } from "../auth-service.js";
 const prompt = PromptSync();
 
 export class AuthScreen {
-  // 인스턴스 속성(데이터)
   private authService: AuthService;
 
-  // 생성자
   constructor() {
     this.authService = new AuthService();
   }
 
-  // 인스턴스 메소드(행동)
   showLoginForm() {
     const inputEmail: string = prompt("이메일을 입력해주세요: ");
     const inputPassword: string = prompt("비밀번호를 입력해주세요: ");
-
-    // 로그인 데이터를 준비하고
     const loginFormData = {
       email: inputEmail,
       password: inputPassword,
