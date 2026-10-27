@@ -1,4 +1,4 @@
-// 제네릭
+// 제네릭: 타입을 변수화
 export class Team<T> {
   private members: T[];
 
