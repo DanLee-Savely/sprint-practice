@@ -27,8 +27,9 @@ deveoper3.updateCode();
 console.log(`코드 업데이트 후 코드 상태: ${deveoper1.getCode()}`);
 console.log(`코드 업데이트 후 코드 상태: ${deveoper2.getCode()}`);
 console.log(`코드 업데이트 후 코드 상태: ${deveoper3.getCode()}`);
+console.log("업무 종료\n");
 // 업무 종료 후 직군별로 스터디 시작
-// 직군별로 팀을 조직
+console.log("스터디 시작");
 const developerTeam = new DeveloperTeam();
 developerTeam.addTeamMember(deveoper1);
 developerTeam.addTeamMember(deveoper2);
