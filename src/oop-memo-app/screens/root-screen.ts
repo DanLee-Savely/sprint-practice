@@ -2,15 +2,12 @@ import PromptSync from "prompt-sync";
 import { AuthScreen } from "./auth-screen.js";
 
 export class RootScreen {
-  // 데이터
   private authScreen: AuthScreen;
 
-  // 생성자
   constructor() {
     this.authScreen = new AuthScreen();
   }
 
-  // 행동
   run() {
     const prompt = PromptSync();
 

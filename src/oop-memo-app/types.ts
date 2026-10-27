@@ -3,7 +3,7 @@ export type loginFormType = {
   password: string;
 };
 
-export type inputUserType = {
+export type signUpFormType = {
   email: string;
   password: string;
   name: string;
@@ -17,15 +17,4 @@ export type userType = {
   name: string;
   age: number;
   isMarried: boolean;
-};
-
-export type inputMemoType = {
-  title: string;
-  content: string;
-};
-
-export type memoType = {
-  email: string;
-  title: string;
-  content: string;
 };

@@ -1,5 +1,8 @@
+import type { userType } from "../types.js";
 export declare class AuthScreen {
-  constructor();
-  showLoginForm(): void;
+    private authService;
+    constructor();
+    showLoginForm(): null | userType;
+    showSignUpForm(): void;
 }
 //# sourceMappingURL=auth-screen.d.ts.map
