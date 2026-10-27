@@ -12,5 +12,8 @@ export class Designer extends Employee {
   updateDesign(newDesign) {
     this.design = newDesign;
   }
+  createIntroduce() {
+    return `안녕하세요. 새롭게 일하게 된 디자이너 ${this.name}입니다.\n${this.email}로 연락주시면 감사하겠습니다.\n`;
+  }
 }
 //# sourceMappingURL=designer.js.map

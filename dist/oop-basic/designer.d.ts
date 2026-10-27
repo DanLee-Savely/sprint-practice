@@ -4,5 +4,6 @@ export declare class Designer extends Employee {
   constructor(name: string, age: number, email: string);
   getDesign(): string;
   updateDesign(newDesign: string): void;
+  createIntroduce(): string;
 }
 //# sourceMappingURL=designer.d.ts.map

@@ -6,5 +6,6 @@ export declare class Developer extends Employee {
   constructor(name: string, age: number, email: string, deigner: Designer);
   getCode(): string;
   updateCode(): void;
+  createIntroduce(): string;
 }
 //# sourceMappingURL=developer.d.ts.map

@@ -1,7 +1,7 @@
 export declare class Employee {
-  private name;
-  private age;
-  private email;
+  protected name: string;
+  protected age: number;
+  protected email: string;
   constructor(name: string, age: number, email: string);
   getName(): string;
   getAge(): number;
