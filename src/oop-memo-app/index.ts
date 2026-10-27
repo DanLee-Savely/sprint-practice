@@ -7,8 +7,7 @@ while (true) {
 
   if (answer === "로그인") {
     // 입력 받기
-    const inputEmail: string = prompt("이메일을 입력해주세요: ");
-    const inputPassword: string = prompt("비밀번호를 입력해주세요: ");
+    // 전문가 직원에게 일을 시키자
   } else if (answer === "회원가입") {
     // 입력 받기
     const inputEmail: string = prompt("이메일을 입력해주세요: ");
