@@ -1,17 +1,14 @@
 export class Developer {
-  // 프로퍼티
   name;
   age;
   code;
   designer;
-  // 생성자
   constructor(name, age, deigner) {
     this.name = name;
     this.age = age;
     this.code = "텅 빈 깃허브";
     this.designer = deigner;
   }
-  // 메소드
   getName = () => {
     return this.name;
   };

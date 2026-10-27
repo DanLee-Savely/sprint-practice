@@ -1,6 +1,6 @@
-// 클래스:
+// 클래스: 객체(오브젝트, 인스턴스)를 생성하기 위한 스펙 문서
 export class Designer {
-  // 프로퍼티
+  // 인스턴스 속성
   name;
   age;
   design;
@@ -10,7 +10,7 @@ export class Designer {
     this.age = age;
     this.design = "텅 빈 캔버스";
   }
-  // 메소드
+  // 인스턴스 메소드
   getName = () => {
     return this.name;
   };
