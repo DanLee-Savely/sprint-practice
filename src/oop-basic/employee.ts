@@ -3,11 +3,13 @@ export class Employee {
   // 인스턴스 속성
   private name: string;
   private age: number;
+  private email: string;
 
   // 생성자
-  constructor(name: string, age: number) {
+  constructor(name: string, age: number, email: string) {
     this.name = name;
     this.age = age;
+    this.email = email;
   }
 
   // 인스턴스 메소드
@@ -16,5 +18,8 @@ export class Employee {
   }
   getAge() {
     return this.age;
+  }
+  getEmail() {
+    return this.email;
   }
 }

@@ -5,8 +5,8 @@ export class Developer extends Employee {
   private code: string;
   private designer: Designer;
 
-  constructor(name: string, age: number, deigner: Designer) {
-    super(name, age);
+  constructor(name: string, age: number, email: string, deigner: Designer) {
+    super(name, age, email);
     this.code = "텅 빈 깃허브";
     this.designer = deigner;
   }

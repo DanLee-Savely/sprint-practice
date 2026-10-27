@@ -4,8 +4,8 @@ import { Employee } from "./employee.js";
 export class Designer extends Employee {
   private design: string;
 
-  constructor(name: string, age: number) {
-    super(name, age);
+  constructor(name: string, age: number, email: string) {
+    super(name, age, email);
     this.design = "텅 빈 캔버스";
   }
 
