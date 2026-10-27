@@ -5,9 +5,12 @@ const prompt = PromptSync();
 
 export class AuthScreen {
   // 인스턴스 속성(데이터)
+  private authService: AuthService;
 
   // 생성자
-  constructor() {}
+  constructor() {
+    this.authService = new AuthService();
+  }
 
   // 인스턴스 메소드(행동)
   showLoginForm() {
@@ -21,8 +24,7 @@ export class AuthScreen {
     };
 
     // 서비스 직원분에게 제출해서 로그인에 성공하면 유저 정보를 알려주세요.
-    const authService = new AuthService();
-    authService.login(loginFormData);
+    this.authService.login(loginFormData);
 
     // 받은 유저 정보를 사용해서 안내 멘트를 합니다.
   }
