@@ -11,6 +11,7 @@ export class AuthScreen {
   }
 
   showLoginForm() {
+    // 입력 받기
     const inputEmail: string = prompt("이메일을 입력해주세요: ");
     const inputPassword: string = prompt("비밀번호를 입력해주세요: ");
     const loginFormData = {
@@ -18,10 +19,17 @@ export class AuthScreen {
       password: inputPassword,
     };
 
-    // 서비스 직원분에게 제출해서 로그인에 성공하면 유저 정보를 알려주세요.
-    this.authService.login(loginFormData);
+    // 로그인 처리
+    const loggedInUser = this.authService.login(loginFormData);
 
-    // 받은 유저 정보를 사용해서 안내 멘트를 합니다.
+    // 결과 처리
+    if (loggedInUser === null) {
+      console.log("로그인에 실패했어요");
+      return null;
+    } else {
+      console.log("로그인에 성공했어요");
+      return loggedInUser;
+    }
   }
 
   showSignUpForm() {
