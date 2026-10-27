@@ -1,1 +1,1 @@
-{"version":3,"file":"team.d.ts","sourceRoot":"","sources":["../../src/oop-basic/team.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,gBAAgB,CAAC;AAEhD,qBAAa,aAAa;IACxB,OAAO,CAAC,gBAAgB,CAAc;IAEtC,cAEC;IAED,aAAa,CAAC,YAAY,EAAE,SAAS,QAEpC;IACD,KAAK,SAQJ;CACF"}
+{"version":3,"file":"team.d.ts","sourceRoot":"","sources":["../../src/oop-basic/team.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,QAAQ,EAAE,MAAM,eAAe,CAAC;AAG9C,qBAAa,IAAI,CAAC,CAAC,SAAS,QAAQ;IAClC,OAAO,CAAC,OAAO,CAAM;IAErB,cAEC;IAED,aAAa,CAAC,SAAS,EAAE,CAAC,QAEzB;IACD,KAAK,SAQJ;CACF"}

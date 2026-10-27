@@ -1,6 +1,6 @@
 import { Designer } from "./designer.js";
 import { Developer } from "./developer.js";
-import { DeveloperTeam } from "./team.js";
+import { Team } from "./team.js";
 // 객체(인스턴스) 생성
 const designer1 = new Designer("김민지", 25, "minji@sprint.com");
 const designer2 = new Designer("이민정", 27, "minjung@sprint.com");
@@ -29,8 +29,14 @@ console.log(`코드 업데이트 후 코드 상태: ${deveoper2.getCode()}`);
 console.log(`코드 업데이트 후 코드 상태: ${deveoper3.getCode()}`);
 console.log("업무 종료\n");
 // 업무 종료 후 직군별로 스터디 시작
-console.log("스터디 시작");
-const developerTeam = new DeveloperTeam();
+console.log("디자이너 팀 스터디 시작");
+const designerTeam = new Team();
+designerTeam.addTeamMember(designer1);
+designerTeam.addTeamMember(designer2);
+designerTeam.addTeamMember(designer3);
+designerTeam.study();
+console.log("개발자 팀 스터디 시작");
+const developerTeam = new Team();
 developerTeam.addTeamMember(deveoper1);
 developerTeam.addTeamMember(deveoper2);
 developerTeam.addTeamMember(deveoper3);
