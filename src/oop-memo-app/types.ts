@@ -1,3 +1,8 @@
+export type loginFormType = {
+  email: string;
+  password: string;
+};
+
 export type inputUserType = {
   email: string;
   password: string;
