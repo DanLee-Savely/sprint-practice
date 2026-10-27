@@ -1,14 +1,16 @@
+// 클래스:
 export class Designer {
-  // 데이터
+  // 프로퍼티
   name;
   age;
   design;
-  // 행동
+  // 생성자
   constructor(name, age) {
     this.name = name;
     this.age = age;
     this.design = "텅 빈 캔버스";
   }
+  // 메소드
   getName = () => {
     return this.name;
   };
