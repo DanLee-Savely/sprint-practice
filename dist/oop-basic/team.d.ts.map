@@ -1,0 +1,1 @@
+{"version":3,"file":"team.d.ts","sourceRoot":"","sources":["../../src/oop-basic/team.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,gBAAgB,CAAC;AAEhD,qBAAa,aAAa;IAExB,OAAO,CAAC,gBAAgB,CAAc;IAGtC,cAEC;IAID,aAAa,CAAC,YAAY,EAAE,SAAS,QAEpC;IACD,KAAK,SAQJ;CACF"}
