@@ -1,10 +1,10 @@
 export class Designer {
-  // 데이터
+  // 프로퍼티
   private name: string;
   private age: number;
   private design: string;
 
-  // 행동
+  // 생성자
   constructor(name: string, age: number) {
     this.name = name;
     this.age = age;

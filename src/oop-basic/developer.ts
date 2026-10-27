@@ -1,13 +1,13 @@
 import type { Designer } from "./designer.js";
 
 export class Developer {
-  // 데이터
+  // 프로퍼티
   private name: string;
   private age: number;
   private code: string;
   private designer: Designer;
 
-  // 행동
+  // 생성자
   constructor(name: string, age: number, deigner: Designer) {
     this.name = name;
     this.age = age;
