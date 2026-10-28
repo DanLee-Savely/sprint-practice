@@ -63,4 +63,9 @@ export const authScreen = (authService: AuthService) => {
       console.log("이미 존재하는 계정입니다.");
     }
   };
+
+  return {
+    showLoginForm: showLoginForm,
+    showSignUpForm: showSignUpForm,
+  };
 };
