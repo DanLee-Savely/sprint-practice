@@ -1,5 +1,5 @@
 import { users } from "./data.js";
-import PromptSync from "inputPrompt-sync";
+import PromptSync from "Prompt-sync";
 import type { userDataType } from "./types.js";
 
 const makeProfile = (user: userDataType): string => {
