@@ -4,11 +4,14 @@
 
 const numbers: number[] = [1, 2, 3, 4, 5];
 
-const newNumbers1: number[] = [];
-for (let i = 0; i < numbers.length; i++) {
-  newNumbers1.push(numbers[i]! * 2);
+const makeTwice = () => {
+  const newNumbers: number[] = [];
+  for (let i = 0; i < numbers.length; i++) {
+    newNumbers.push(numbers[i]! * 2);
+  }
+  return newNumbers;
 }
-console.log(newNumbers1);
+console.log(makeTwice());
 
 const newNumbers2: number[] = [];
 for (let i = 0; i < numbers.length; i++) {
