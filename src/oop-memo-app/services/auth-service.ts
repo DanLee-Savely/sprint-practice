@@ -9,8 +9,8 @@ import type {
 export class AuthService {
   private authRepository: AuthRepository;
 
-  constructor() {
-    this.authRepository = new AuthRepository();
+  constructor(authRepository: AuthRepository) {
+    this.authRepository = authRepository;
   }
 
   login(loginFormData: loginFormType): null | userClientType {

@@ -1,18 +1,18 @@
-import PromptSync from "prompt-sync";
+import PromptSync from "Prompt-sync";
 import { users } from "./data.js";
 import { login, singUp } from "./service.js";
 import { createMemo, loadMemosByEmail } from "./repository.js";
-const prompt = PromptSync();
+const inputPrompt = PromptSync();
 let loggedInUser = null;
 while (true) {
   console.log();
-  const answer = prompt(
+  const answer = inputPrompt(
     `메뉴(현재 사용자 ${users.length}명): 로그인, 회원가입, 종료: `,
   );
   if (answer === "로그인") {
     // 입력 받기
-    const inputEmail = prompt("이메일을 입력해주세요: ");
-    const inputPassword = prompt("비밀번호를 입력해주세요: ");
+    const inputEmail = inputPrompt("이메일을 입력해주세요: ");
+    const inputPassword = inputPrompt("비밀번호를 입력해주세요: ");
     // 로그인 처리
     loggedInUser = login(inputEmail, inputPassword);
     // 안내 멘트
@@ -23,11 +23,11 @@ while (true) {
     }
   } else if (answer === "회원가입") {
     // 입력 받기
-    const inputEmail = prompt("이메일을 입력해주세요: ");
-    const inputPassword = prompt("비밀번호를 입력해주세요: ");
-    const inputName = prompt("이름을 알려주세요: ");
-    const inputAge = Number(prompt("나이를 알려주세요: "));
-    const inputIsMarriedStr = prompt("결혼 유뮤를 알려주세요(y/n): ");
+    const inputEmail = inputPrompt("이메일을 입력해주세요: ");
+    const inputPassword = inputPrompt("비밀번호를 입력해주세요: ");
+    const inputName = inputPrompt("이름을 알려주세요: ");
+    const inputAge = Number(inputPrompt("나이를 알려주세요: "));
+    const inputIsMarriedStr = inputPrompt("결혼 유뮤를 알려주세요(y/n): ");
     let inputIsMarried;
     if (inputIsMarriedStr === "y") {
       inputIsMarried = true;
@@ -57,7 +57,7 @@ while (true) {
 }
 while (loggedInUser !== null) {
   console.log(`${loggedInUser.name}님의 메모장입니다.`);
-  const answer = prompt("메뉴: 메모 읽기, 메모 쓰기, 종료: ");
+  const answer = inputPrompt("메뉴: 메모 읽기, 메모 쓰기, 종료: ");
   if (answer === "메모 읽기") {
     // 메모 불러오기
     const myMemos = loadMemosByEmail(loggedInUser.email);
@@ -67,8 +67,8 @@ while (loggedInUser !== null) {
     }
   } else if (answer === "메모 쓰기") {
     // 입력 받기
-    const inputTitle = prompt("제목을 입력해주세요: ");
-    const inputContent = prompt("내용을 입력해주세요: ");
+    const inputTitle = inputPrompt("제목을 입력해주세요: ");
+    const inputContent = inputPrompt("내용을 입력해주세요: ");
     const memo = {
       title: inputTitle,
       content: inputContent,

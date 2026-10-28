@@ -1,14 +1,12 @@
-import PromptSync from "prompt-sync";
 import { MemoService } from "../services/memo-service.js";
 import type { createMemoFormType } from "../types.js";
-
-const prompt = PromptSync();
+import { inputPrompt } from "../utils.js";
 
 export class MemoScreen {
   private memoService: MemoService;
 
-  constructor() {
-    this.memoService = new MemoService();
+  constructor(memoService: MemoService) {
+    this.memoService = memoService;
   }
 
   showMyRecentMemo(email: string) {
@@ -22,8 +20,8 @@ export class MemoScreen {
   }
   showCreateMemoForm(email: string) {
     // 입력 받기
-    const inputTitle: string = prompt("제목을 입력해주세요: ");
-    const inputContent: string = prompt("내용을 입력해주세요: ");
+    const inputTitle: string = inputPrompt("제목을 입력해주세요: ");
+    const inputContent: string = inputPrompt("내용을 입력해주세요: ");
     const memoFormData: createMemoFormType = {
       title: inputTitle,
       content: inputContent,

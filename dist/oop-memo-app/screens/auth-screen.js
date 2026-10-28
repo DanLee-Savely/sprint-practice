@@ -1,15 +1,14 @@
-import PromptSync from "prompt-sync";
-import { AuthService } from "../auth-service.js";
-const prompt = PromptSync();
+import { AuthService } from "../services/auth-service.js";
+import { inputPrompt } from "../utils.js";
 export class AuthScreen {
   authService;
-  constructor() {
-    this.authService = new AuthService();
+  constructor(authService) {
+    this.authService = authService;
   }
   showLoginForm() {
     // 입력 받기
-    const inputEmail = prompt("이메일을 입력해주세요: ");
-    const inputPassword = prompt("비밀번호를 입력해주세요: ");
+    const inputEmail = inputPrompt("이메일을 입력해주세요: ");
+    const inputPassword = inputPrompt("비밀번호를 입력해주세요: ");
     const loginFormData = {
       email: inputEmail,
       password: inputPassword,
@@ -26,11 +25,11 @@ export class AuthScreen {
     }
   }
   showSignUpForm() {
-    const inputEmail = prompt("이메일을 입력해주세요: ");
-    const inputPassword = prompt("비밀번호를 입력해주세요: ");
-    const inputName = prompt("이름을 알려주세요: ");
-    const inputAge = Number(prompt("나이를 알려주세요: "));
-    const inputIsMarriedStr = prompt("결혼 유뮤를 알려주세요(y/n): ");
+    const inputEmail = inputPrompt("이메일을 입력해주세요: ");
+    const inputPassword = inputPrompt("비밀번호를 입력해주세요: ");
+    const inputName = inputPrompt("이름을 알려주세요: ");
+    const inputAge = Number(inputPrompt("나이를 알려주세요: "));
+    const inputIsMarriedStr = inputPrompt("결혼 유뮤를 알려주세요(y/n): ");
     let inputIsMarried;
     if (inputIsMarriedStr === "y") {
       inputIsMarried = true;

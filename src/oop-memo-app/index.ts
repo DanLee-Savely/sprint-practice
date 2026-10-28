@@ -1,4 +1,5 @@
-import { RootScreen } from "./screens/root-screen.js";
+import { Injector } from "./injector.js";
 
-const rootScreen = new RootScreen();
+const injector = new Injector();
+const rootScreen = injector.inject();
 rootScreen.run();

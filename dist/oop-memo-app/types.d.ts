@@ -22,4 +22,17 @@ export type userDataType = {
   age: number;
   isMarried: boolean;
 };
+export type memoClientType = {
+  title: string;
+  content: string;
+};
+export type createMemoFormType = {
+  title: string;
+  content: string;
+};
+export type memoDataType = {
+  email: string;
+  title: string;
+  content: string;
+};
 //# sourceMappingURL=types.d.ts.map

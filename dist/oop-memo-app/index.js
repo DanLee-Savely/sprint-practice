@@ -1,4 +1,5 @@
-import { RootScreen } from "./screens/root-screen.js";
-const rootScreen = new RootScreen();
+import { Injector } from "./injector.js";
+const injector = new Injector();
+const rootScreen = injector.inject();
 rootScreen.run();
 //# sourceMappingURL=index.js.map

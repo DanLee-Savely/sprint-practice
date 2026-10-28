@@ -1,5 +1,5 @@
 import { memos } from "../data.js";
-import type { createMemoFormType, memoDataType } from "../types.js";
+import type { memoDataType } from "../types.js";
 
 export class MemoRepository {
   loadMemosByEmail(email: string): memoDataType[] {
