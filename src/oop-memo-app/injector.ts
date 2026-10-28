@@ -18,5 +18,7 @@ export class Injector {
     const memoScreen = new MemoScreen(memoService);
 
     const rootScreen = new RootScreen(authScreen, memoScreen);
+
+    return rootScreen;
   }
 }
