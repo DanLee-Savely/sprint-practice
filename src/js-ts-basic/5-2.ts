@@ -17,3 +17,21 @@ console.log(map((v: number) => 3 * v + 10, [1, 2, 3, 4]));
 const numbers: number[] = [1, 2, 3, 4, 5];
 
 console.log(numbers.map((v: number) => 2 * v));
+console.log(
+  numbers.filter((v: number) => {
+    if (v % 2 === 1) {
+      return false;
+    } else {
+      return true;
+    }
+  }),
+);
+console.log(
+  numbers.find((v: number) => {
+    if (v === 3) {
+      return true;
+    } else {
+      return false;
+    }
+  }),
+);

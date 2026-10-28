@@ -8,21 +8,28 @@ const map = (callback, numbers) => {
   }
   return newNumbers;
 };
+console.log(map((v) => 2 * v, [1, 2, 3]));
+console.log(map((v) => 3 * v + 10, [1, 2, 3, 4]));
+// 사용자가 편하게 쓸 수 있도록 준비된 고차함수들
+const numbers = [1, 2, 3, 4, 5];
+console.log(numbers.map((v) => 2 * v));
 console.log(
-  map(
-    (v) => {
-      return 2 * v;
-    },
-    [1, 2, 3],
-  ),
-); // 2배하고싶다
+  numbers.filter((v) => {
+    if (v % 2 === 1) {
+      return false;
+    } else {
+      return true;
+    }
+  }),
+);
 console.log(
-  map(
-    (v) => {
-      return 3 * v + 10;
-    },
-    [1, 2, 3, 4],
-  ),
-); // 3배하고싶다
+  numbers.find((v) => {
+    if (v === 3) {
+      return true;
+    } else {
+      return false;
+    }
+  }),
+);
 export {};
 //# sourceMappingURL=5-2.js.map
