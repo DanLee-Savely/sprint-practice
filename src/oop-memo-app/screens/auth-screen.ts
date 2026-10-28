@@ -1,6 +1,10 @@
 import PromptSync from "prompt-sync";
 import { AuthService } from "../auth-service.js";
-import type { loginFormType, signUpFormType, userType } from "../types.js";
+import type {
+  loginFormType,
+  signUpFormType,
+  userTypeClient,
+} from "../types.js";
 
 const prompt = PromptSync();
 
@@ -11,7 +15,7 @@ export class AuthScreen {
     this.authService = new AuthService();
   }
 
-  showLoginForm(): null | userType {
+  showLoginForm(): null | userTypeClient {
     // 입력 받기
     const inputEmail: string = prompt("이메일을 입력해주세요: ");
     const inputPassword: string = prompt("비밀번호를 입력해주세요: ");
