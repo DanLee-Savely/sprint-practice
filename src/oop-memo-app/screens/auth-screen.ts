@@ -1,12 +1,10 @@
-import PromptSync from "inputPrompt-sync";
 import { AuthService } from "../services/auth-service.js";
 import type {
   loginFormType,
   signUpFormType,
   userClientType,
 } from "../types.js";
-
-const inputPrompt = PromptSync();
+import { inputPrompt } from "../utils.js";
 
 export class AuthScreen {
   private authService: AuthService;
@@ -42,7 +40,9 @@ export class AuthScreen {
     const inputPassword: string = inputPrompt("비밀번호를 입력해주세요: ");
     const inputName: string = inputPrompt("이름을 알려주세요: ");
     const inputAge: number = Number(inputPrompt("나이를 알려주세요: "));
-    const inputIsMarriedStr: string = inputPrompt("결혼 유뮤를 알려주세요(y/n): ");
+    const inputIsMarriedStr: string = inputPrompt(
+      "결혼 유뮤를 알려주세요(y/n): ",
+    );
 
     let inputIsMarried: boolean;
     if (inputIsMarriedStr === "y") {

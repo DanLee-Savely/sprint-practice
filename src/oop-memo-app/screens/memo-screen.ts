@@ -1,8 +1,6 @@
-import PromptSync from "inputPrompt-sync";
 import { MemoService } from "../services/memo-service.js";
 import type { createMemoFormType } from "../types.js";
-
-const inputPrompt = PromptSync();
+import { inputPrompt } from "../utils.js";
 
 export class MemoScreen {
   private memoService: MemoService;

@@ -1,7 +1,7 @@
-import PromptSync from "inputPrompt-sync";
 import { AuthScreen } from "./auth-screen.js";
 import type { userClientType } from "../types.js";
 import { MemoScreen } from "./memo-screen.js";
+import { inputPrompt } from "../utils.js";
 
 export class RootScreen {
   private authScreen: AuthScreen;
@@ -15,8 +15,6 @@ export class RootScreen {
   }
 
   run() {
-    const inputPrompt = PromptSync();
-
     while (true) {
       const answer: string = inputPrompt(`메뉴: 로그인, 회원가입, 종료: `);
 

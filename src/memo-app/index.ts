@@ -40,7 +40,9 @@ while (true) {
     const inputPassword: string = inputPrompt("비밀번호를 입력해주세요: ");
     const inputName: string = inputPrompt("이름을 알려주세요: ");
     const inputAge: number = Number(inputPrompt("나이를 알려주세요: "));
-    const inputIsMarriedStr: string = inputPrompt("결혼 유뮤를 알려주세요(y/n): ");
+    const inputIsMarriedStr: string = inputPrompt(
+      "결혼 유뮤를 알려주세요(y/n): ",
+    );
 
     let inputIsMarried: boolean;
     if (inputIsMarriedStr === "y") {
