@@ -31,10 +31,23 @@ export class RootScreen {
       }
     }
 
-    if (this.loggedInUser !== null) {
-      console.log(this.loggedInUser);
-    } else {
-      console.log("프로그램을 종료합니다");
+    console.log();
+
+    while (this.loggedInUser !== null) {
+      console.log(`${this.loggedInUser.name}님의 메모장입니다.`);
+
+      const answer: string = prompt("메뉴: 메모 읽기, 메모 쓰기, 종료: ");
+      if (answer === "메모 읽기") {
+        // 메모 스크린에게 메모 화면 보여달라고 부탁한다.
+      } else if (answer === "메모 쓰기") {
+        // 메모 스크린에게 메모 작성 폼 화면 보여달라고 부탁한다.
+      } else if (answer === "종료") {
+        break;
+      } else {
+        console.log("잘못된 입력입니다.");
+      }
     }
+
+    console.log("프로그램을 종료합니다");
   }
 }
