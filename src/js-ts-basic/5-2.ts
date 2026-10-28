@@ -8,7 +8,7 @@ const map = (callback: (v: number) => number, numbers: number[]) => {
     newNumbers.push(callback(numbers[i]!));
   }
   return newNumbers;
-}
+};
 
-console.log(map((v: number) => {return 2 * v}, [1, 2, 3]));
-console.log(map((v: number) => {return 3 * v}, [1, 2, 3, 4]));
+console.log(map((v: number) => 2 * v, [1, 2, 3]));
+console.log(map((v: number) => 3 * v + 10, [1, 2, 3, 4]));

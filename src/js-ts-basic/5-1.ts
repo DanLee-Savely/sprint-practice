@@ -19,6 +19,10 @@ const addThree = (x: number): number => {
 };
 console.log(addThree(10));
 
+// 화살표 익명 함수
+const addFour = (x: number): number => x + 4;
+console.log(addFour(10));
+
 // 실전 연습
 const makeProfile = (user: userDataType): string => {
   if (user.isMarried === true) {
