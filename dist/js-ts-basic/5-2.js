@@ -8,7 +8,7 @@ const makeTwice = (numbers) => {
     }
     return newNumbers;
 };
-console.log(makeTwice([1, 2, 3, 4, 5]));
+console.log(makeTwice([1, 2, 3]));
 const makeTriple = (numbers) => {
     const newNumbers = [];
     for (let i = 0; i < numbers.length; i++) {
@@ -16,6 +16,6 @@ const makeTriple = (numbers) => {
     }
     return newNumbers;
 };
-console.log(makeTriple([1, 2, 3, 4, 5]));
+console.log(makeTriple([1, 2, 3, 4]));
 export {};
 //# sourceMappingURL=5-2.js.map

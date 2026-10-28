@@ -9,7 +9,7 @@ const makeTwice = (numbers: number[]) => {
   }
   return newNumbers;
 }
-console.log(makeTwice([1, 2, 3, 4, 5]));
+console.log(makeTwice([1, 2, 3]));
 
 const makeTriple = (numbers: number[]) => {
   const newNumbers: number[] = [];
@@ -18,4 +18,4 @@ const makeTriple = (numbers: number[]) => {
   }
   return newNumbers;
 }
-console.log(makeTriple([1, 2, 3, 4, 5]));
+console.log(makeTriple([1, 2, 3, 4]));
