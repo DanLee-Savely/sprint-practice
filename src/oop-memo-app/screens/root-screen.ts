@@ -41,7 +41,7 @@ export class RootScreen {
 
       const answer: string = prompt("메뉴: 메모 읽기, 메모 쓰기, 종료: ");
       if (answer === "메모 읽기") {
-        this.memoScreen.showMyMemoList(this.loggedInUser.email);
+        this.memoScreen.showMyRecentMemo(this.loggedInUser.email);
       } else if (answer === "메모 쓰기") {
         this.memoScreen.showCreateMemoForm(this.loggedInUser.email);
       } else if (answer === "종료") {

@@ -1,10 +1,10 @@
 import PromptSync from "prompt-sync";
-import { AuthService } from "../auth-service.js";
+import { AuthService } from "../services/auth-service.js";
 const prompt = PromptSync();
 export class AuthScreen {
   authService;
-  constructor() {
-    this.authService = new AuthService();
+  constructor(authService) {
+    this.authService = authService;
   }
   showLoginForm() {
     // 입력 받기
