@@ -13,8 +13,11 @@ const makeTwice = () => {
 }
 console.log(makeTwice());
 
-const newNumbers2: number[] = [];
-for (let i = 0; i < numbers.length; i++) {
-  newNumbers2.push(numbers[i]! * 3);
+const makeTriple = () => {
+  const newNumbers: number[] = [];
+  for (let i = 0; i < numbers.length; i++) {
+    newNumbers.push(numbers[i]! * 3);
+  }
+  return newNumbers;
 }
-console.log(newNumbers2);
+console.log(makeTriple());

@@ -10,10 +10,13 @@ const makeTwice = () => {
     return newNumbers;
 };
 console.log(makeTwice());
-const newNumbers2 = [];
-for (let i = 0; i < numbers.length; i++) {
-    newNumbers2.push(numbers[i] * 3);
-}
-console.log(newNumbers2);
+const makeTriple = () => {
+    const newNumbers = [];
+    for (let i = 0; i < numbers.length; i++) {
+        newNumbers.push(numbers[i] * 3);
+    }
+    return newNumbers;
+};
+console.log(makeTriple());
 export {};
 //# sourceMappingURL=5-2.js.map
