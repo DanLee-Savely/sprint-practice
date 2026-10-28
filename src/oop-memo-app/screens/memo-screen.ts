@@ -7,8 +7,14 @@ export class MemoScreen {
     this.memoService = new MemoService();
   }
 
-  showMyMemoList(email: string) {
-    // 이메일로 메모 목록을 찾아서 예쁘게 보여주자.
+  showMyRecentMemo(email: string) {
+    const myMemo = this.memoService.loadRecentMemo(email);
+
+    if (myMemo === null) {
+      console.log("작성된 메모가 없습니다.");
+    } else {
+      console.log(`제목: ${myMemo.title}\n내용: ${myMemo.content}`);
+    }
   }
   showCreateMemoForm(email: string) {
     // 이메일 정보를 활용해서 메모를 작성하고 추가하자.
