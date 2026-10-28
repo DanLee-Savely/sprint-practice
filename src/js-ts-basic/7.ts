@@ -1,8 +1,8 @@
 import { users } from "./data.js";
 import PromptSync from "prompt-sync";
-import type { userType } from "./types.js";
+import type { userDataType } from "./types.js";
 
-const makeProfile = (user: userType): string => {
+const makeProfile = (user: userDataType): string => {
   if (user.isMarried === true) {
     return `프로필: ${user.name}님은 ${user.age}살입니다.(기혼)`;
   } else {
@@ -38,7 +38,7 @@ if (inputIsMarriedStr === "y") {
   inputIsMarried = false;
 }
 
-const user4: userType = {
+const user4: userDataType = {
   name: inputName,
   age: inputAge,
   isMarried: inputIsMarried,

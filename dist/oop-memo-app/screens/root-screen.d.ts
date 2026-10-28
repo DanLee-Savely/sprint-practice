@@ -1,6 +1,7 @@
 export declare class RootScreen {
-    private authScreen;
-    constructor();
-    run(): void;
+  private authScreen;
+  private loggedInUser;
+  constructor();
+  run(): void;
 }
 //# sourceMappingURL=root-screen.d.ts.map

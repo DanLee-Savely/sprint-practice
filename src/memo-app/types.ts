@@ -6,7 +6,7 @@ export type inputUserType = {
   isMarried: boolean;
 };
 
-export type userType = {
+export type userDataType = {
   email: string;
   password: string;
   name: string;

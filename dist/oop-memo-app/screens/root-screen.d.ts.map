@@ -1,1 +1,1 @@
-{"version":3,"file":"root-screen.d.ts","sourceRoot":"","sources":["../../../src/oop-memo-app/screens/root-screen.ts"],"names":[],"mappings":"AAGA,qBAAa,UAAU;IACrB,OAAO,CAAC,UAAU,CAAa;IAE/B,cAEC;IAED,GAAG,SAqBF;CACF"}
+{"version":3,"file":"root-screen.d.ts","sourceRoot":"","sources":["../../../src/oop-memo-app/screens/root-screen.ts"],"names":[],"mappings":"AAIA,qBAAa,UAAU;IACrB,OAAO,CAAC,UAAU,CAAa;IAC/B,OAAO,CAAC,YAAY,CAAwB;IAE5C,cAGC;IAED,GAAG,SAyBF;CACF"}
