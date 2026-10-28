@@ -6,14 +6,8 @@ import type {
 } from "../types.js";
 import { inputPrompt } from "../utils.js";
 
-export class AuthScreen {
-  private authService: AuthService;
-
-  constructor(authService: AuthService) {
-    this.authService = authService;
-  }
-
-  showLoginForm(): null | userClientType {
+export const authScreen = (authService: AuthService) => {
+  const showLoginForm = (): null | userClientType => {
     // 입력 받기
     const inputEmail: string = inputPrompt("이메일을 입력해주세요: ");
     const inputPassword: string = inputPrompt("비밀번호를 입력해주세요: ");
@@ -23,7 +17,7 @@ export class AuthScreen {
     };
 
     // 로그인 처리
-    const loggedInUser = this.authService.login(loginFormData);
+    const loggedInUser = authService.login(loginFormData);
 
     // 결과 보고
     if (loggedInUser === null) {
@@ -33,9 +27,9 @@ export class AuthScreen {
       console.log("로그인에 성공했어요");
       return loggedInUser;
     }
-  }
+  };
 
-  showSignUpForm() {
+  const showSignUpForm = () => {
     const inputEmail: string = inputPrompt("이메일을 입력해주세요: ");
     const inputPassword: string = inputPrompt("비밀번호를 입력해주세요: ");
     const inputName: string = inputPrompt("이름을 알려주세요: ");
@@ -60,7 +54,7 @@ export class AuthScreen {
     };
 
     // 회원 가입 처리
-    const isSignUpSuccess: boolean = this.authService.singUp(signUpFormData);
+    const isSignUpSuccess: boolean = authService.singUp(signUpFormData);
 
     // 안내 멘트
     if (isSignUpSuccess) {
@@ -68,5 +62,5 @@ export class AuthScreen {
     } else {
       console.log("이미 존재하는 계정입니다.");
     }
-  }
-}
+  };
+};
