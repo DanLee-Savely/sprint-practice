@@ -14,11 +14,7 @@ export class MemoRepository {
     return myMemos;
   }
 
-  createMemo(email: string, memoFormData: createMemoFormType) {
-    const newMemo: memoDataType = {
-      ...memoFormData,
-      email: email,
-    };
-    memos.push(newMemo);
+  createMemo(memoData: memoDataType) {
+    memos.push(memoData);
   }
 }
