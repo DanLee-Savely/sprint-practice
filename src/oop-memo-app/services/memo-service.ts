@@ -10,9 +10,9 @@ export class MemoService {
   private authRepository: AuthRepository;
   private memoRepository: MemoRepository;
 
-  constructor() {
-    this.authRepository = new AuthRepository();
-    this.memoRepository = new MemoRepository();
+  constructor(authRepository: AuthRepository, memoRepository: MemoRepository) {
+    this.authRepository = authRepository;
+    this.memoRepository = memoRepository;
   }
 
   loadRecentMemo(email: string): null | memoClientType {

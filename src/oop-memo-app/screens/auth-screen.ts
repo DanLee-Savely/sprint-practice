@@ -11,8 +11,8 @@ const prompt = PromptSync();
 export class AuthScreen {
   private authService: AuthService;
 
-  constructor() {
-    this.authService = new AuthService();
+  constructor(authService: AuthService) {
+    this.authService = authService;
   }
 
   showLoginForm(): null | userClientType {

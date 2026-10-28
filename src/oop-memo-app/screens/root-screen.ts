@@ -8,9 +8,9 @@ export class RootScreen {
   private memoScreen: MemoScreen;
   private loggedInUser: userClientType | null;
 
-  constructor() {
-    this.authScreen = new AuthScreen();
-    this.memoScreen = new MemoScreen();
+  constructor(authScreen: AuthScreen, memoScreen: MemoScreen) {
+    this.authScreen = authScreen;
+    this.memoScreen = memoScreen;
     this.loggedInUser = null;
   }
 

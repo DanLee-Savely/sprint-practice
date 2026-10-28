@@ -7,8 +7,8 @@ const prompt = PromptSync();
 export class MemoScreen {
   private memoService: MemoService;
 
-  constructor() {
-    this.memoService = new MemoService();
+  constructor(memoService: MemoService) {
+    this.memoService = memoService;
   }
 
   showMyRecentMemo(email: string) {
