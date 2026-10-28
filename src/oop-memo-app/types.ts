@@ -1,3 +1,10 @@
+export type userTypeClient = {
+  email: string;
+  name: string;
+  age: number;
+  isMarried: boolean;
+};
+
 export type loginFormType = {
   email: string;
   password: string;
