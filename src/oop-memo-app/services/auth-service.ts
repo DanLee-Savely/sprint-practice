@@ -1,6 +1,10 @@
 import { AuthRepository } from "../repositories/auth-repository.js";
 import { users } from "../data.js";
-import type { loginFormType, signUpFormType, userClientType } from "../types.js";
+import type {
+  loginFormType,
+  signUpFormType,
+  userClientType,
+} from "../types.js";
 
 export class AuthService {
   private authRepository: AuthRepository;
