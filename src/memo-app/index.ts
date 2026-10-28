@@ -6,12 +6,12 @@ import type {
   inputMemoType,
   inputUserType,
   memoType,
-  userType,
+  userDataType,
 } from "./types.js";
 
 const prompt = PromptSync();
 
-let loggedInUser: userType | null = null;
+let loggedInUser: userDataType | null = null;
 
 while (true) {
   console.log();

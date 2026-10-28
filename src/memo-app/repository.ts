@@ -1,7 +1,7 @@
 import { memos, users } from "./data.js";
-import type { inputMemoType, memoType, userType } from "./types.js";
+import type { inputMemoType, memoType, userDataType } from "./types.js";
 
-export const findUserByEmail = (email: string): userType | null => {
+export const findUserByEmail = (email: string): userDataType | null => {
   for (let i = 0; i < users.length; i++) {
     if (users[i]!.email === email) {
       return users[i]!;

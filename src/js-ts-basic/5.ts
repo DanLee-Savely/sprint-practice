@@ -1,5 +1,5 @@
 import { users } from "./data.js";
-import type { userType } from "./types.js";
+import type { userDataType } from "./types.js";
 
 // 함수
 function addOne(x: number): number {
@@ -20,7 +20,7 @@ const addThree = (x: number): number => {
 console.log(addThree(10));
 
 // 실전 연습
-const makeProfile = (user: userType): string => {
+const makeProfile = (user: userDataType): string => {
   if (user.isMarried === true) {
     return `프로필: ${user.name}님은 ${user.age}살입니다.(기혼)`;
   } else {

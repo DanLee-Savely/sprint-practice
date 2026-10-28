@@ -1,18 +1,18 @@
-import type { userType } from "./types.js";
+import type { userDataType } from "./types.js";
 
 // 참조값
 // : 객체: 다른 종류의 데이터를 여러개 모아서 사용하는 컨테이너
 // : 배열: 같은 종류의 데이터를 여러개 담아서 사용하는 컨테이너
 
 // 객체(Object)
-const user1: userType = {
+const user1: userDataType = {
   name: "김민수",
   age: 25,
   isMarried: true,
 };
 console.log(`프로필: ${user1.name}님은 ${user1.age}살입니다.`);
 
-const user2: userType = {
+const user2: userDataType = {
   name: "김민지",
   age: 21,
   isMarried: false,
@@ -20,14 +20,14 @@ const user2: userType = {
 console.log(`프로필: ${user2.name}님은 ${user2.age}살입니다.`);
 
 // 배열(Array)
-const users: userType[] = [user1, user2];
+const users: userDataType[] = [user1, user2];
 console.log(users);
 console.log(`현재 유저는 총 ${users.length}명입니다.`);
 // users[인덱스]
 console.log(`프로필: ${users[0]!.name}님은 ${users[0]!.age}살입니다.`);
 console.log(`프로필: ${users[1]!.name}님은 ${users[1]!.age}살입니다.`);
 
-const user3: userType = {
+const user3: userDataType = {
   name: "김민정",
   age: 19,
   isMarried: false,

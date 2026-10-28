@@ -1,6 +1,6 @@
-import type { memoType, userType } from "./types.js";
+import type { memoType, userDataType } from "./types.js";
 
-export const users: userType[] = [
+export const users: userDataType[] = [
   {
     email: "a@a.com",
     password: "1234",

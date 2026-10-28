@@ -1,1 +1,0 @@
-{"version":3,"file":"auth-screen.d.ts","sourceRoot":"","sources":["../../../src/oop-memo-app/screens/auth-screen.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAiC,QAAQ,EAAE,MAAM,aAAa,CAAC;AAI3E,qBAAa,UAAU;IACrB,OAAO,CAAC,WAAW,CAAc;IAEjC,cAEC;IAED,aAAa,IAAI,IAAI,GAAG,QAAQ,CAoB/B;IAED,cAAc,SA+Bb;CACF"}

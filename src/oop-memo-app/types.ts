@@ -1,4 +1,4 @@
-export type userTypeClient = {
+export type userClientType = {
   email: string;
   name: string;
   age: number;
@@ -18,7 +18,7 @@ export type signUpFormType = {
   isMarried: boolean;
 };
 
-export type userType = {
+export type userDataType = {
   email: string;
   password: string;
   name: string;

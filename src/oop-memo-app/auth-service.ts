@@ -1,6 +1,6 @@
 import { AuthRepository } from "./auth-repository.js";
 import { users } from "./data.js";
-import type { loginFormType, signUpFormType, userTypeClient } from "./types.js";
+import type { loginFormType, signUpFormType, userClientType } from "./types.js";
 
 export class AuthService {
   private authRepository: AuthRepository;
@@ -9,7 +9,7 @@ export class AuthService {
     this.authRepository = new AuthRepository();
   }
 
-  login(loginFormData: loginFormType): null | userTypeClient {
+  login(loginFormData: loginFormType): null | userClientType {
     const foundUser = this.authRepository.findUserByEmail(loginFormData.email);
     if (foundUser === null) {
       return null;
@@ -18,7 +18,7 @@ export class AuthService {
       return null;
     }
 
-    const user: userTypeClient = {
+    const user: userClientType = {
       email: foundUser.email,
       name: foundUser.name,
       age: foundUser.age,
