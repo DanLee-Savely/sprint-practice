@@ -1,5 +1,5 @@
 import { users } from "./data.js";
-import PromptSync from "prompt-sync";
+import PromptSync from "inputPrompt-sync";
 import type { userDataType } from "./types.js";
 
 const makeProfile = (user: userDataType): string => {
@@ -18,18 +18,18 @@ for (let i: number = 0; i < users.length; i++) {
   console.log(makeProfile(users[i]!));
 }
 
-// prompt-sync 사용 예시
-const prompt = PromptSync();
-const inputEmail: string = prompt("이메일이 뭐에요?: ");
+// inputPrompt-sync 사용 예시
+const inputPrompt = PromptSync();
+const inputEmail: string = inputPrompt("이메일이 뭐에요?: ");
 console.log(`유저가 입력한 이메일: ${inputEmail}`);
 
 // 실전 연습1
 // 유저 1명로부터 이름, 나이, 결혼 여부(y, n)를 입력받아보세요.
 // 그 유저의 정보를 users 배열에 추가해주세요.
 // 4명의 유저 모두의 프로필을 출력해주세요.
-const inputName: string = prompt("이름이 뭐에요?: ");
-const inputAge: number = Number(prompt("나이를 알려주세요: "));
-const inputIsMarriedStr: string = prompt("결혼을 했나요?(y/n): ");
+const inputName: string = inputPrompt("이름이 뭐에요?: ");
+const inputAge: number = Number(inputPrompt("나이를 알려주세요: "));
+const inputIsMarriedStr: string = inputPrompt("결혼을 했나요?(y/n): ");
 
 let inputIsMarried: boolean;
 if (inputIsMarriedStr === "y") {

@@ -1,4 +1,4 @@
-import PromptSync from "prompt-sync";
+import PromptSync from "inputPrompt-sync";
 import { users } from "./data.js";
 import { login, singUp } from "./service.js";
 import { createMemo, loadMemosByEmail } from "./repository.js";
@@ -9,21 +9,21 @@ import type {
   userDataType,
 } from "./types.js";
 
-const prompt = PromptSync();
+const inputPrompt = PromptSync();
 
 let loggedInUser: userDataType | null = null;
 
 while (true) {
   console.log();
 
-  const answer: string = prompt(
+  const answer: string = inputPrompt(
     `메뉴(현재 사용자 ${users.length}명): 로그인, 회원가입, 종료: `,
   );
 
   if (answer === "로그인") {
     // 입력 받기
-    const inputEmail: string = prompt("이메일을 입력해주세요: ");
-    const inputPassword: string = prompt("비밀번호를 입력해주세요: ");
+    const inputEmail: string = inputPrompt("이메일을 입력해주세요: ");
+    const inputPassword: string = inputPrompt("비밀번호를 입력해주세요: ");
 
     // 로그인 처리
     loggedInUser = login(inputEmail, inputPassword);
@@ -36,11 +36,11 @@ while (true) {
     }
   } else if (answer === "회원가입") {
     // 입력 받기
-    const inputEmail: string = prompt("이메일을 입력해주세요: ");
-    const inputPassword: string = prompt("비밀번호를 입력해주세요: ");
-    const inputName: string = prompt("이름을 알려주세요: ");
-    const inputAge: number = Number(prompt("나이를 알려주세요: "));
-    const inputIsMarriedStr: string = prompt("결혼 유뮤를 알려주세요(y/n): ");
+    const inputEmail: string = inputPrompt("이메일을 입력해주세요: ");
+    const inputPassword: string = inputPrompt("비밀번호를 입력해주세요: ");
+    const inputName: string = inputPrompt("이름을 알려주세요: ");
+    const inputAge: number = Number(inputPrompt("나이를 알려주세요: "));
+    const inputIsMarriedStr: string = inputPrompt("결혼 유뮤를 알려주세요(y/n): ");
 
     let inputIsMarried: boolean;
     if (inputIsMarriedStr === "y") {
@@ -76,7 +76,7 @@ while (true) {
 while (loggedInUser !== null) {
   console.log(`${loggedInUser.name}님의 메모장입니다.`);
 
-  const answer: string = prompt("메뉴: 메모 읽기, 메모 쓰기, 종료: ");
+  const answer: string = inputPrompt("메뉴: 메모 읽기, 메모 쓰기, 종료: ");
 
   if (answer === "메모 읽기") {
     // 메모 불러오기
@@ -88,8 +88,8 @@ while (loggedInUser !== null) {
     }
   } else if (answer === "메모 쓰기") {
     // 입력 받기
-    const inputTitle: string = prompt("제목을 입력해주세요: ");
-    const inputContent: string = prompt("내용을 입력해주세요: ");
+    const inputTitle: string = inputPrompt("제목을 입력해주세요: ");
+    const inputContent: string = inputPrompt("내용을 입력해주세요: ");
 
     const memo: inputMemoType = {
       title: inputTitle,

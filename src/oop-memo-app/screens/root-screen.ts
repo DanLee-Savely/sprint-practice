@@ -1,4 +1,4 @@
-import PromptSync from "prompt-sync";
+import PromptSync from "inputPrompt-sync";
 import { AuthScreen } from "./auth-screen.js";
 import type { userClientType } from "../types.js";
 import { MemoScreen } from "./memo-screen.js";
@@ -15,10 +15,10 @@ export class RootScreen {
   }
 
   run() {
-    const prompt = PromptSync();
+    const inputPrompt = PromptSync();
 
     while (true) {
-      const answer: string = prompt(`메뉴: 로그인, 회원가입, 종료: `);
+      const answer: string = inputPrompt(`메뉴: 로그인, 회원가입, 종료: `);
 
       if (answer === "로그인") {
         this.loggedInUser = this.authScreen.showLoginForm();
@@ -39,7 +39,7 @@ export class RootScreen {
     while (this.loggedInUser !== null) {
       console.log(`${this.loggedInUser.name}님의 메모장입니다.`);
 
-      const answer: string = prompt("메뉴: 메모 읽기, 메모 쓰기, 종료: ");
+      const answer: string = inputPrompt("메뉴: 메모 읽기, 메모 쓰기, 종료: ");
       if (answer === "메모 읽기") {
         this.memoScreen.showMyRecentMemo(this.loggedInUser.email);
       } else if (answer === "메모 쓰기") {
