@@ -4,8 +4,14 @@
 
 const numbers: number[] = [1, 2, 3, 4, 5];
 
-const newNumbers: number[] = [];
+const newNumbers1: number[] = [];
 for (let i = 0; i < numbers.length; i++) {
-  newNumbers.push(numbers[i]! * 2);
+  newNumbers1.push(numbers[i]! * 2);
 }
-console.log(newNumbers);
+console.log(newNumbers1);
+
+const newNumbers2: number[] = [];
+for (let i = 0; i < numbers.length; i++) {
+  newNumbers2.push(numbers[i]! * 3);
+}
+console.log(newNumbers2);

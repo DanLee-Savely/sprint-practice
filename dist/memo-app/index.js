@@ -1,4 +1,4 @@
-import PromptSync from "inputPrompt-sync";
+import PromptSync from "Prompt-sync";
 import { users } from "./data.js";
 import { login, singUp } from "./service.js";
 import { createMemo, loadMemosByEmail } from "./repository.js";

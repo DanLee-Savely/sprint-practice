@@ -1,5 +1,5 @@
 import { users } from "./data.js";
-import PromptSync from "inputPrompt-sync";
+import PromptSync from "Prompt-sync";
 const makeProfile = (user) => {
     if (user.isMarried === true) {
         return `프로필: ${user.name}님은 ${user.age}살입니다.(기혼)`;
