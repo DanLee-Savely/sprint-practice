@@ -1,5 +1,5 @@
-import { users } from "./data.js";
-import type { userDataType } from "./types.js";
+import { users } from "../data.js";
+import type { userDataType } from "../types.js";
 
 export class AuthRepository {
   findUserByEmail(email: string): userDataType | null {
