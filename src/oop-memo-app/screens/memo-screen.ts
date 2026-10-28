@@ -1,4 +1,8 @@
+import PromptSync from "prompt-sync";
 import { MemoService } from "../services/memo-service.js";
+import type { createMemoFormType } from "../types.js";
+
+const prompt = PromptSync();
 
 export class MemoScreen {
   private memoService: MemoService;
@@ -17,6 +21,22 @@ export class MemoScreen {
     }
   }
   showCreateMemoForm(email: string) {
-    // 이메일 정보를 활용해서 메모를 작성하고 추가하자.
+    // 입력 받기
+    const inputTitle: string = prompt("제목을 입력해주세요: ");
+    const inputContent: string = prompt("내용을 입력해주세요: ");
+    const memoFormData: createMemoFormType = {
+      title: inputTitle,
+      content: inputContent,
+    };
+
+    // 메모 생성
+    const isCreated = this.memoService.createMemo(email, memoFormData);
+
+    // 결과 안내
+    if (isCreated === true) {
+      console.log("메모가 생성되었습니다.");
+    } else {
+      console.log("메모가 생성에 실패했어요.");
+    }
   }
 }

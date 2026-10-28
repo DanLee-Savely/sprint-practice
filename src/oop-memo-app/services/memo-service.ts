@@ -1,5 +1,5 @@
 import { MemoRepository } from "../repositories/memo-repository.js";
-import type { memoClientType } from "../types.js";
+import type { createMemoFormType, memoClientType } from "../types.js";
 
 export class MemoService {
   private memoRepository: MemoRepository;
@@ -20,5 +20,9 @@ export class MemoService {
         content: memos[lastIndex].content,
       };
     }
+  }
+
+  createMemo(email: string, memoFormData: createMemoFormType): boolean {
+    return true;
   }
 }
