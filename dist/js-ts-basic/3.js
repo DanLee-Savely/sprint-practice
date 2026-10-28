@@ -28,12 +28,11 @@ console.log(y <= 1);
 const z = 2;
 // 삼항 연산자를 모르는 경우
 const isEvenNumber = (n) => {
-    if (n % 2 === 0) {
-        return true;
-    }
-    else {
-        return false;
-    }
+  if (n % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 };
 console.log(isEvenNumber(z));
 // 삼항 연산자를 아는 경우
