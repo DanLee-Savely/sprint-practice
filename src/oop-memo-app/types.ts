@@ -25,3 +25,9 @@ export type userDataType = {
   age: number;
   isMarried: boolean;
 };
+
+export type memoDataType = {
+  email: string;
+  title: string;
+  content: string;
+};
