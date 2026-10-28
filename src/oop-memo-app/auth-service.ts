@@ -1,4 +1,4 @@
-import { AuthRepository } from "./auth-repository.js";
+import { AuthRepository } from "./repositories/auth-repository.js";
 import { users } from "./data.js";
 import type { loginFormType, signUpFormType, userClientType } from "./types.js";
 
