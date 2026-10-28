@@ -26,6 +26,16 @@ export type userDataType = {
   isMarried: boolean;
 };
 
+export type memoClientType = {
+  title: string;
+  content: string;
+};
+
+export type createMemoFormType = {
+  title: string;
+  content: string;
+};
+
 export type memoDataType = {
   email: string;
   title: string;
