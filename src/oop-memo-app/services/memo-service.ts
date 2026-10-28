@@ -1,10 +1,17 @@
+import { AuthRepository } from "../repositories/auth-repository.js";
 import { MemoRepository } from "../repositories/memo-repository.js";
-import type { createMemoFormType, memoClientType } from "../types.js";
+import type {
+  createMemoFormType,
+  memoClientType,
+  memoDataType,
+} from "../types.js";
 
 export class MemoService {
+  private authRepository: AuthRepository;
   private memoRepository: MemoRepository;
 
   constructor() {
+    this.authRepository = new AuthRepository();
     this.memoRepository = new MemoRepository();
   }
 
@@ -23,6 +30,17 @@ export class MemoService {
   }
 
   createMemo(email: string, memoFormData: createMemoFormType): boolean {
+    const foundUser = this.authRepository.findUserByEmail(email);
+    if (foundUser === null) {
+      return false;
+    }
+
+    const newMemo: memoDataType = {
+      ...memoFormData,
+      email: email,
+    };
+    this.memoRepository.createMemo(newMemo);
+
     return true;
   }
 }
