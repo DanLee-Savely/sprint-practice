@@ -32,6 +32,20 @@ console.log(y <= 1);
 // ! (not, 논리를 반대로 부정한다)
 
 // 삼항 연산자
+const z = 2;
+
+// 삼항 연산자를 모르는 경우
+const isEvenNumber = (n: number) => {
+  if (n % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+console.log(isEvenNumber(z));
+
+// 삼항 연산자를 아는 경우
+console.log(z % 2 === 0 ? true : false);
 // 옵셔널 체이닝
 // 널 병합 연산자
 // 타입 체크 연산자

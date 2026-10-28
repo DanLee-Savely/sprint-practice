@@ -13,23 +13,7 @@ console.log(map((v) => 3 * v + 10, [1, 2, 3, 4]));
 // 사용자가 편하게 쓸 수 있도록 준비된 고차함수들
 const numbers = [1, 2, 3, 4, 5];
 console.log(numbers.map((v) => 2 * v));
-console.log(
-  numbers.filter((v) => {
-    if (v % 2 === 1) {
-      return false;
-    } else {
-      return true;
-    }
-  }),
-);
-console.log(
-  numbers.find((v) => {
-    if (v === 3) {
-      return true;
-    } else {
-      return false;
-    }
-  }),
-);
+console.log(numbers.filter((v) => (v % 2 === 0 ? true : false)));
+console.log(numbers.find((v) => (v === 3 ? true : false)));
 export {};
 //# sourceMappingURL=5-2.js.map
