@@ -1,11 +1,14 @@
 import PromptSync from "prompt-sync";
 import { AuthScreen } from "./auth-screen.js";
+import type { userClientType } from "../types.js";
 
 export class RootScreen {
   private authScreen: AuthScreen;
+  private loggedInUser: userClientType | null;
 
   constructor() {
     this.authScreen = new AuthScreen();
+    this.loggedInUser = null;
   }
 
   run() {
@@ -15,8 +18,8 @@ export class RootScreen {
       const answer: string = prompt(`메뉴: 로그인, 회원가입, 종료: `);
 
       if (answer === "로그인") {
-        const loggedInUser = this.authScreen.showLoginForm();
-        if (loggedInUser !== null) {
+        this.loggedInUser = this.authScreen.showLoginForm();
+        if (this.loggedInUser !== null) {
           break;
         }
       } else if (answer === "회원가입") {
@@ -28,6 +31,10 @@ export class RootScreen {
       }
     }
 
-    console.log("프로그램을 종료합니다");
+    if (this.loggedInUser !== null) {
+      console.log(this.loggedInUser);
+    } else {
+      console.log("프로그램을 종료합니다");
+    }
   }
 }
