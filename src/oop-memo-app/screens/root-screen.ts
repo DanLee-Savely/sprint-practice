@@ -1,13 +1,16 @@
 import PromptSync from "prompt-sync";
 import { AuthScreen } from "./auth-screen.js";
 import type { userClientType } from "../types.js";
+import { MemoScreen } from "./memo-screen.js";
 
 export class RootScreen {
   private authScreen: AuthScreen;
+  private memoScreen: MemoScreen;
   private loggedInUser: userClientType | null;
 
   constructor() {
     this.authScreen = new AuthScreen();
+    this.memoScreen = new MemoScreen();
     this.loggedInUser = null;
   }
 
@@ -38,9 +41,9 @@ export class RootScreen {
 
       const answer: string = prompt("메뉴: 메모 읽기, 메모 쓰기, 종료: ");
       if (answer === "메모 읽기") {
-        // 메모 스크린에게 메모 화면 보여달라고 부탁한다.
+        this.memoScreen.showMyMemoList(this.loggedInUser.email);
       } else if (answer === "메모 쓰기") {
-        // 메모 스크린에게 메모 작성 폼 화면 보여달라고 부탁한다.
+        this.memoScreen.showCreateMemoForm(this.loggedInUser.email);
       } else if (answer === "종료") {
         break;
       } else {
