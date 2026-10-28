@@ -1,5 +1,5 @@
 import PromptSync from "prompt-sync";
-import { AuthService } from "../auth-service.js";
+import { AuthService } from "../services/auth-service.js";
 import type {
   loginFormType,
   signUpFormType,
